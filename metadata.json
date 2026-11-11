@@ -1,0 +1,6 @@
+{
+  "name": "GlowBeauty Pro - Agenda & Citas por WhatsApp",
+  "description": "App para profesionales de la belleza con catálogo de servicios, citas en línea compartibles en redes sociales y alertas automáticas por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

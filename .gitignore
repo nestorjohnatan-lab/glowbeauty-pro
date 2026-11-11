@@ -1,0 +1,20 @@
+node_modules/
+dist/
+build/
+coverage/
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Entorno y Secretos
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Base de datos local (se genera en tiempo de ejecución en el servidor)
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm
