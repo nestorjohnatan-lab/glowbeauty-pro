@@ -215,7 +215,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
     <div className="space-y-6">
       {/* Toast Alert */}
       {savedFeedback && (
-        <div className="fixed top-20 right-4 z-50 bg-amber-400 text-zinc-950 font-bold px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2 border border-amber-300 animate-bounce">
+        <div className="fixed top-20 right-4 z-50 bg-[#72202E] text-white text-zinc-950 font-bold px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2 border border-[#72202E]/30 animate-bounce">
           <Check className="w-4 h-4 stroke-[3]" />
           <span className="text-xs">{t.scheduleSavedSuccess}</span>
         </div>
@@ -225,8 +225,8 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
       <div className="bg-white border border-zinc-200 rounded-2xl p-5 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-amber-700" />
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30 flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Validação Automática em Tempo Real' : 'Validación Automática'}</span>
             </span>
           </div>
@@ -240,7 +240,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
 
         <button
           onClick={handleSave}
-          className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 flex items-center gap-2 transition-transform active:scale-95 shrink-0"
+          className="px-5 py-2.5 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs shadow-md shadow-amber-500/20 flex items-center gap-2 transition-transform active:scale-95 shrink-0"
         >
           <Save className="w-4 h-4" />
           <span>{t.scheduleSaveBtn}</span>
@@ -264,15 +264,15 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
             {lang === 'pt' ? 'Carga Horária' : 'Carga Semanal'}
           </span>
           <div className="flex items-baseline gap-2 mt-1">
-            <span className="text-2xl font-bold font-serif text-amber-700">{totalWeeklyHours.toFixed(1)}h</span>
+            <span className="text-2xl font-bold font-serif text-[#72202E]">{totalWeeklyHours.toFixed(1)}h</span>
             <span className="text-xs text-zinc-500">{t.hoursPerWeek}</span>
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-amber-50/70 to-zinc-50 border border-amber-200/80 rounded-xl p-4 shadow-xs flex items-start gap-2.5">
-          <Sparkles className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
+        <div className="bg-gradient-to-br from-amber-50/70 to-zinc-50 border border-[#EAE3D9]/80 rounded-xl p-4 shadow-xs flex items-start gap-2.5">
+          <Sparkles className="w-4 h-4 text-[#72202E] mt-0.5 shrink-0" />
           <div className="text-xs">
-            <span className="font-bold text-amber-950 block">
+            <span className="font-bold text-[#1F1E1D] block">
               {lang === 'pt' ? 'Validação na Reserva' : 'Validado en Reservas'}
             </span>
             <span className="text-zinc-600 text-[11px] leading-tight block mt-0.5">
@@ -288,37 +288,37 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
       <div className="bg-white border border-zinc-200 rounded-2xl p-5 shadow-xs space-y-4">
         <div>
           <span className="text-xs font-bold text-zinc-900 uppercase tracking-wider flex items-center gap-1.5 mb-2">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
             <span>{lang === 'pt' ? 'Modelos Prontos de Horário (Clique para aplicar)' : 'Plantillas Rápidas'}</span>
           </span>
           <div className="flex flex-wrap gap-2">
             <button
               type="button"
               onClick={applyPresetSegSab}
-              className="px-3 py-1.5 rounded-lg bg-zinc-50 hover:bg-amber-50 border border-zinc-200 hover:border-amber-400 text-xs text-zinc-800 font-medium transition-colors"
+              className="px-3 py-1.5 rounded-lg bg-zinc-50 hover:bg-[#F4EFEB] border border-zinc-200 hover:border-[#72202E]/40 text-xs text-zinc-800 font-medium transition-colors"
             >
               ⭐ {t.presetSegSab}
             </button>
             <button
               type="button"
               onClick={applyPresetTerSab}
-              className="px-3 py-1.5 rounded-lg bg-zinc-50 hover:bg-amber-50 border border-zinc-200 hover:border-amber-400 text-xs text-zinc-800 font-medium transition-colors"
+              className="px-3 py-1.5 rounded-lg bg-zinc-50 hover:bg-[#F4EFEB] border border-zinc-200 hover:border-[#72202E]/40 text-xs text-zinc-800 font-medium transition-colors"
             >
               📅 {t.presetTerSab}
             </button>
             <button
               type="button"
               onClick={applyPresetSegSex}
-              className="px-3 py-1.5 rounded-lg bg-zinc-50 hover:bg-amber-50 border border-zinc-200 hover:border-amber-400 text-xs text-zinc-800 font-medium transition-colors"
+              className="px-3 py-1.5 rounded-lg bg-zinc-50 hover:bg-[#F4EFEB] border border-zinc-200 hover:border-[#72202E]/40 text-xs text-zinc-800 font-medium transition-colors"
             >
               💼 {t.presetSegSex}
             </button>
             <button
               type="button"
               onClick={copyMondayToWeekdays}
-              className="px-3 py-1.5 rounded-lg bg-amber-100/60 hover:bg-amber-100 border border-amber-300 text-xs text-amber-900 font-semibold transition-colors flex items-center gap-1.5"
+              className="px-3 py-1.5 rounded-lg bg-[#72202E]/10/60 hover:bg-[#72202E]/10 border border-[#72202E]/30 text-xs text-[#72202E] font-semibold transition-colors flex items-center gap-1.5"
             >
-              <Copy className="w-3 h-3 text-amber-700" />
+              <Copy className="w-3 h-3 text-[#72202E]" />
               <span>{t.applyToWeekdaysBtn}</span>
             </button>
           </div>
@@ -374,7 +374,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
               key={meta.day}
               className={`bg-white border rounded-2xl p-4 sm:p-5 transition-all shadow-xs ${
                 schedule.isOpen
-                  ? 'border-zinc-200 hover:border-amber-300'
+                  ? 'border-zinc-200 hover:border-[#72202E]/30'
                   : 'border-zinc-200/60 bg-zinc-50/70 opacity-80'
               }`}
             >
@@ -384,7 +384,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
                   <div
                     className={`w-9 h-9 rounded-xl flex items-center justify-center font-bold text-xs uppercase shadow-xs ${
                       schedule.isOpen
-                        ? 'bg-gradient-to-br from-amber-400 to-yellow-500 text-zinc-950'
+                        ? 'bg-gradient-to-br from-[#72202E] to-[#581520] text-zinc-950'
                         : 'bg-zinc-200 text-zinc-600'
                     }`}
                   >
@@ -451,28 +451,28 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
                     {/* Opening Time */}
                     <div>
                       <label className="block text-xs font-semibold text-zinc-700 mb-1 flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-amber-600" />
+                        <Clock className="w-3.5 h-3.5 text-[#72202E]" />
                         <span>{t.openingTimeLabel}</span>
                       </label>
                       <input
                         type="time"
                         value={schedule.openTime || '09:00'}
                         onChange={(e) => handleTimeChange(meta.day, 'openTime', e.target.value)}
-                        className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-amber-500"
+                        className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-[#72202E]"
                       />
                     </div>
 
                     {/* Closing Time */}
                     <div>
                       <label className="block text-xs font-semibold text-zinc-700 mb-1 flex items-center gap-1.5">
-                        <Clock className="w-3.5 h-3.5 text-amber-600" />
+                        <Clock className="w-3.5 h-3.5 text-[#72202E]" />
                         <span>{t.closingTimeLabel}</span>
                       </label>
                       <input
                         type="time"
                         value={schedule.closeTime || '19:00'}
                         onChange={(e) => handleTimeChange(meta.day, 'closeTime', e.target.value)}
-                        className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-amber-500"
+                        className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-[#72202E]"
                       />
                     </div>
                   </div>
@@ -481,7 +481,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
                   <div className="bg-zinc-50/80 border border-zinc-200 rounded-xl p-3 space-y-2.5">
                     <div className="flex items-center justify-between">
                       <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-zinc-800">
-                        <Coffee className="w-3.5 h-3.5 text-amber-700" />
+                        <Coffee className="w-3.5 h-3.5 text-[#72202E]" />
                         <span>{t.lunchBreakLabel}</span>
                       </label>
 
@@ -490,7 +490,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
                         onClick={() => handleToggleBreak(meta.day)}
                         className={`text-xs px-2.5 py-0.5 rounded-lg font-medium transition-colors border ${
                           schedule.hasBreak
-                            ? 'bg-amber-100 text-amber-900 border-amber-300'
+                            ? 'bg-[#72202E]/10 text-[#72202E] border-[#72202E]/30'
                             : 'bg-white text-zinc-600 border-zinc-200 hover:bg-zinc-100'
                         }`}
                       >
@@ -510,7 +510,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
                             type="time"
                             value={schedule.breakStart || '12:30'}
                             onChange={(e) => handleBreakTimeChange(meta.day, 'breakStart', e.target.value)}
-                            className="w-full bg-white border border-zinc-300 rounded-lg px-2.5 py-1.5 text-xs text-zinc-900 font-mono focus:outline-none focus:border-amber-500"
+                            className="w-full bg-white border border-zinc-300 rounded-lg px-2.5 py-1.5 text-xs text-zinc-900 font-mono focus:outline-none focus:border-[#72202E]"
                           />
                         </div>
 
@@ -522,7 +522,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
                             type="time"
                             value={schedule.breakEnd || '13:30'}
                             onChange={(e) => handleBreakTimeChange(meta.day, 'breakEnd', e.target.value)}
-                            className="w-full bg-white border border-zinc-300 rounded-lg px-2.5 py-1.5 text-xs text-zinc-900 font-mono focus:outline-none focus:border-amber-500"
+                            className="w-full bg-white border border-zinc-300 rounded-lg px-2.5 py-1.5 text-xs text-zinc-900 font-mono focus:outline-none focus:border-[#72202E]"
                           />
                         </div>
                       </div>
@@ -543,7 +543,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
                   <button
                     type="button"
                     onClick={() => handleToggleDay(meta.day)}
-                    className="text-amber-700 hover:underline font-semibold text-xs"
+                    className="text-[#72202E] hover:underline font-semibold text-xs"
                   >
                     {lang === 'pt' ? 'Abrir atendimento' : 'Abrir este día'}
                   </button>
@@ -567,7 +567,7 @@ export const WeeklyScheduleManager: React.FC<WeeklyScheduleManagerProps> = ({
 
         <button
           onClick={handleSave}
-          className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-sm shadow-md shadow-amber-500/20 flex items-center gap-2 transition-transform active:scale-95"
+          className="px-6 py-3 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-sm shadow-md shadow-amber-500/20 flex items-center gap-2 transition-transform active:scale-95"
         >
           <Save className="w-4 h-4" />
           <span>{t.scheduleSaveBtn}</span>

@@ -152,11 +152,11 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
   return (
     <div className="space-y-6 pb-24">
       {/* Top Banner - Gold, Black & Light Gray */}
-      <div className="bg-gradient-to-r from-white via-zinc-50 to-amber-50/50 border border-amber-300/70 rounded-2xl p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-white via-zinc-50 to-amber-50/50 border border-[#72202E]/30/70 rounded-2xl p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Fidelização & Retorno' : 'Fidelización'}</span>
             </span>
           </div>
@@ -171,7 +171,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
         <div className="flex items-center gap-2">
           <div className="bg-white px-3.5 py-2 rounded-xl border border-zinc-200 text-xs shadow-xs">
             <span className="text-zinc-600 font-medium">{t.readyToSend}: </span>
-            <span className="font-bold text-amber-700">
+            <span className="font-bold text-[#72202E]">
               {currentList.filter((a) => a.status === 'pending').length}
             </span>
           </div>
@@ -184,7 +184,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
           onClick={() => setActiveTab('maintenance')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all ${
             activeTab === 'maintenance'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -199,7 +199,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
           onClick={() => setActiveTab('reminders')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all ${
             activeTab === 'reminders'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -214,7 +214,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
           onClick={() => setActiveTab('templates')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all ${
             activeTab === 'templates'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -226,13 +226,13 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
           onClick={() => setActiveTab('ai_agent')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'ai_agent'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
-          <Bot className="w-3.5 h-3.5 text-amber-700" />
+          <Bot className="w-3.5 h-3.5 text-[#72202E]" />
           <span>{lang === 'pt' ? '🤖 Agente IA de Respostas' : '🤖 Agente IA de Respuestas'}</span>
-          <span className="px-1.5 py-0.5 rounded-full text-[10px] bg-amber-400/30 text-zinc-950 font-bold border border-amber-400/50">
+          <span className="px-1.5 py-0.5 rounded-full text-[10px] bg-[#72202E] text-white/30 text-zinc-950 font-bold border border-[#72202E]/40/50">
             Gemini
           </span>
         </button>
@@ -258,14 +258,14 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder={t.searchClient}
-              className="w-full bg-white border border-zinc-200 rounded-xl pl-10 pr-4 py-2.5 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+              className="w-full bg-white border border-zinc-200 rounded-xl pl-10 pr-4 py-2.5 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E]"
             />
           </div>
 
           <div className="space-y-3">
             {filteredList.length === 0 ? (
               <div className="bg-white border border-zinc-200 rounded-2xl p-10 text-center text-zinc-500 space-y-2 shadow-xs">
-                <Check className="w-8 h-8 mx-auto text-amber-600" />
+                <Check className="w-8 h-8 mx-auto text-[#72202E]" />
                 <p className="text-xs font-medium">
                   {lang === 'pt' ? 'Tudo em dia! Nenhum aviso pendente no momento.' : '¡Todo al día!'}
                 </p>
@@ -277,7 +277,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
                   className={`bg-white border rounded-2xl p-4 sm:p-5 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs ${
                     alert.status === 'sent'
                       ? 'border-zinc-200 opacity-60'
-                      : 'border-zinc-200 hover:border-amber-400'
+                      : 'border-zinc-200 hover:border-[#72202E]/40'
                   }`}
                 >
                   <div className="space-y-1.5 min-w-0 flex-1">
@@ -286,7 +286,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
                         {alert.clientName}
                       </h3>
                       {alert.daysElapsed !== undefined && (
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30">
                           {alert.daysElapsed} {t.elapsedDays} (Ciclo: {alert.suggestedMaintenanceDays}d)
                         </span>
                       )}
@@ -298,7 +298,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
                       )}
                     </div>
 
-                    <p className="text-xs text-amber-700 font-semibold">
+                    <p className="text-xs text-[#72202E] font-semibold">
                       {alert.serviceName} • {formatPrice(alert.price, alert.currency, lang)}
                     </p>
 
@@ -334,7 +334,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
             >
               <div className="flex items-center justify-between">
                 <h3 className="font-semibold text-sm text-zinc-950 flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4 text-amber-600" />
+                  <MessageSquare className="w-4 h-4 text-[#72202E]" />
                   <span>{tpl.title}</span>
                 </h3>
 
@@ -344,7 +344,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
                       onUpdateTemplate(tpl.id, editingText);
                       setEditingTemplateId(null);
                     }}
-                    className="px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold text-xs flex items-center gap-1 shadow-xs"
+                    className="px-3.5 py-1.5 rounded-lg bg-[#72202E] text-white font-bold text-xs flex items-center gap-1 shadow-xs"
                   >
                     <Save className="w-3.5 h-3.5" />
                     <span>Salvar</span>
@@ -358,7 +358,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
                     className="p-1.5 rounded-lg text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100"
                     title="Editar modelo"
                   >
-                    <Edit2 className="w-4 h-4 text-amber-600" />
+                    <Edit2 className="w-4 h-4 text-[#72202E]" />
                   </button>
                 )}
               </div>
@@ -369,7 +369,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
                     rows={6}
                     value={editingText}
                     onChange={(e) => setEditingText(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-amber-500 leading-relaxed"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-[#72202E] leading-relaxed"
                   />
                   <div className="flex items-center gap-1.5 flex-wrap pt-1">
                     <span className="text-[10px] text-zinc-500 font-medium">
@@ -382,7 +382,7 @@ export const WhatsAppAlertsCenter: React.FC<WhatsAppAlertsCenterProps> = ({
                         onClick={() => setEditingText((prev) => `${prev} ${v}`)}
                         className={`px-2 py-0.5 rounded-md text-[10px] font-mono border transition-colors ${
                           v === '{datos_bancarios}' || v === '{pix}'
-                            ? 'bg-amber-100 text-amber-950 border-amber-300 font-bold hover:bg-amber-200'
+                            ? 'bg-[#72202E]/10 text-[#1F1E1D] border-[#72202E]/30 font-bold hover:bg-amber-200'
                             : 'bg-zinc-100 text-zinc-700 border-zinc-200 hover:bg-zinc-200'
                         }`}
                       >

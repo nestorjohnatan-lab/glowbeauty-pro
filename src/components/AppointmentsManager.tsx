@@ -233,9 +233,9 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                 : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-200/50'
             }`}
           >
-            <Calendar className="w-4 h-4 text-amber-600" />
+            <Calendar className="w-4 h-4 text-[#72202E]" />
             <span>{t.tabAgendaNav || 'Agenda & Citas'}</span>
-            <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-900 font-bold ml-0.5">
+            <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-[#72202E]/10 text-[#72202E] font-bold ml-0.5">
               {appointments.filter((a) => a.status !== 'cancelled').length}
             </span>
           </button>
@@ -245,7 +245,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
             onClick={() => setManagerTab('client_notes')}
             className={`flex-1 sm:flex-initial px-4 py-2 rounded-lg text-xs font-bold flex items-center justify-center gap-2 transition-all ${
               managerTab === 'client_notes'
-                ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 shadow-xs'
+                ? 'bg-[#72202E] text-white shadow-xs'
                 : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-200/50'
             }`}
           >
@@ -263,7 +263,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
           <div className="flex items-center justify-end gap-2">
             <button
               onClick={() => setIsNewModalOpen(true)}
-              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs shadow-xs transition-transform active:scale-95"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs shadow-xs transition-transform active:scale-95"
             >
               <Plus className="w-3.5 h-3.5 stroke-[3]" />
               <span>{t.newAppointment}</span>
@@ -285,19 +285,19 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
         /* VIEW 2: APPOINTMENTS AGENDA */
         <div className="space-y-6">
           {/* Top Banner - Luxurious Gold, Black & Light Gray */}
-          <div className="bg-gradient-to-r from-white via-zinc-50 to-amber-50/50 border border-amber-300/70 rounded-2xl p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="bg-gradient-to-r from-white via-zinc-50 to-amber-50/50 border border-[#72202E]/30/70 rounded-2xl p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <div className="flex items-center gap-2 mb-1 flex-wrap">
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1.5">
-                  <CalendarDays className="w-3.5 h-3.5 text-amber-700" />
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30 flex items-center gap-1.5">
+                  <CalendarDays className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{todayCount} {lang === 'pt' ? 'atendimentos hoje' : 'citas hoy'}</span>
                 </span>
                 <button
                   type="button"
                   onClick={() => setManagerTab('client_notes')}
-                  className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-700 hover:bg-amber-100 hover:text-amber-950 border border-zinc-200 hover:border-amber-300 flex items-center gap-1 transition-colors"
+                  className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-700 hover:bg-[#72202E]/10 hover:text-[#1F1E1D] border border-zinc-200 hover:border-[#72202E]/30 flex items-center gap-1 transition-colors"
                 >
-                  <ClipboardList className="w-3.5 h-3.5 text-amber-600" />
+                  <ClipboardList className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{totalTechnicalNotesCount} {lang === 'pt' ? 'fichas de clientes' : 'notas técnicas'}</span>
                 </button>
               </div>
@@ -316,12 +316,12 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                 onClick={() => handleOpenNoteModalGeneral()}
                 className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-800 border border-zinc-300 font-semibold text-xs transition-colors shadow-2xs"
               >
-                <ClipboardList className="w-3.5 h-3.5 text-amber-600" />
+                <ClipboardList className="w-3.5 h-3.5 text-[#72202E]" />
                 <span>{t.btnNewClientNote}</span>
               </button>
               <button
                 onClick={() => setIsNewModalOpen(true)}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 transition-transform active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs shadow-md shadow-amber-500/20 transition-transform active:scale-95"
               >
                 <Plus className="w-4 h-4 stroke-[3]" />
                 <span>{t.newAppointment}</span>
@@ -346,7 +346,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                   onClick={() => setActiveFilter(tab.id)}
                   className={`px-3.5 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition-colors ${
                     activeFilter === tab.id
-                      ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+                      ? 'bg-[#72202E] text-white font-bold shadow-xs'
                       : 'bg-white text-zinc-700 hover:bg-zinc-50 border border-zinc-200'
                   }`}
                 >
@@ -362,7 +362,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder={t.searchClient}
-                className="w-full bg-white border border-zinc-200 rounded-xl pl-9 pr-3 py-2 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+                className="w-full bg-white border border-zinc-200 rounded-xl pl-9 pr-3 py-2 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E]"
               />
             </div>
           </div>
@@ -393,14 +393,14 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                     key={apt.id}
                     className={`bg-white border rounded-2xl p-4 sm:p-5 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs ${
                       isToday
-                        ? 'border-amber-400 bg-amber-50/30 ring-1 ring-amber-400/30'
+                        ? 'border-[#72202E]/40 bg-[#F4EFEB]/30 ring-1 ring-amber-400/30'
                         : 'border-zinc-200 hover:border-zinc-300'
                     }`}
                   >
                     {/* Left: Time & Client Data */}
                     <div className="flex items-start gap-3.5 min-w-0">
                       <div className="w-14 h-14 rounded-xl bg-zinc-100 border border-zinc-200 flex flex-col items-center justify-center shrink-0">
-                        <span className="text-[10px] uppercase font-bold text-amber-700">
+                        <span className="text-[10px] uppercase font-bold text-[#72202E]">
                           {isToday ? (lang === 'pt' ? 'HOJE' : 'HOY') : apt.date.slice(5)}
                         </span>
                         <span className="text-sm font-bold text-zinc-950">
@@ -430,7 +430,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                           </span>
                         </div>
 
-                        <p className="text-xs text-amber-700 font-semibold">
+                        <p className="text-xs text-[#72202E] font-semibold">
                           {apt.serviceName}
                         </p>
 
@@ -459,12 +459,12 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                             <button
                               type="button"
                               onClick={() => handleOpenNoteForAppointment(apt)}
-                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-950 transition-colors shadow-2xs"
+                              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-bold bg-[#F4EFEB] hover:bg-[#72202E]/10 border border-[#72202E]/30 text-[#1F1E1D] transition-colors shadow-2xs"
                               title="Ver ficha técnica completa"
                             >
-                              <ClipboardList className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                              <span className="text-[10px] uppercase font-bold text-amber-700">Ficha:</span>
-                              <span className="font-medium text-amber-950 truncate max-w-[180px] sm:max-w-xs">
+                              <ClipboardList className="w-3.5 h-3.5 text-[#72202E] shrink-0" />
+                              <span className="text-[10px] uppercase font-bold text-[#72202E]">Ficha:</span>
+                              <span className="font-medium text-[#1F1E1D] truncate max-w-[180px] sm:max-w-xs">
                                 {techNote.lashCurvature
                                   ? `${techNote.lashCurvature} ${techNote.lashLengths || ''} ${techNote.lashMapping ? '• ' + techNote.lashMapping : ''}`
                                   : techNote.makeupFoundationTone
@@ -489,9 +489,9 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                             <button
                               type="button"
                               onClick={() => handleOpenNoteForAppointment(apt)}
-                              className="inline-flex items-center gap-1 text-[11px] text-zinc-400 hover:text-amber-800 font-medium transition-colors"
+                              className="inline-flex items-center gap-1 text-[11px] text-zinc-400 hover:text-[#72202E] font-medium transition-colors"
                             >
-                              <ClipboardList className="w-3 h-3 text-amber-600" />
+                              <ClipboardList className="w-3 h-3 text-[#72202E]" />
                               <span>+ Registrar Ficha Técnica</span>
                             </button>
                           </div>
@@ -506,12 +506,12 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                         onClick={() => handleOpenNoteForAppointment(apt)}
                         className={`px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 border transition-colors shadow-2xs ${
                           techNote
-                            ? 'bg-amber-50 hover:bg-amber-100 text-amber-950 border-amber-300'
+                            ? 'bg-[#F4EFEB] hover:bg-[#72202E]/10 text-[#1F1E1D] border-[#72202E]/30'
                             : 'bg-zinc-50 hover:bg-zinc-100 text-zinc-700 border-zinc-200'
                         }`}
                         title={lang === 'pt' ? 'Ficha técnica da cliente' : 'Ficha técnica / antecedentes'}
                       >
-                        <ClipboardList className="w-3.5 h-3.5 text-amber-600" />
+                        <ClipboardList className="w-3.5 h-3.5 text-[#72202E]" />
                         <span>{techNote ? t.technicalSheetBtn : '+ Ficha'}</span>
                       </button>
 
@@ -544,10 +544,10 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                         <button
                           type="button"
                           onClick={() => onOpenAiAssistantForAppointment(apt)}
-                          className="px-3 py-2 rounded-xl bg-gradient-to-r from-amber-400/20 to-yellow-400/20 hover:from-amber-400/30 hover:to-yellow-400/30 border border-amber-300 text-amber-950 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-2xs"
+                          className="px-3 py-2 rounded-xl bg-gradient-to-r from-amber-400/20 to-yellow-400/20 hover:from-amber-400/30 hover:to-yellow-400/30 border border-[#72202E]/30 text-[#1F1E1D] text-xs font-semibold flex items-center gap-1.5 transition-all shadow-2xs"
                           title={lang === 'pt' ? 'Redigir resposta com IA para esta cliente' : 'Redactar respuesta inteligente con IA'}
                         >
-                          <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                          <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
                           <span className="hidden xs:inline">{lang === 'pt' ? 'IA Responder' : 'IA Responder'}</span>
                         </button>
                       )}
@@ -599,7 +599,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-zinc-950/60 backdrop-blur-sm animate-fade-in">
           <div className="bg-white border border-zinc-200 rounded-2xl w-full max-w-md p-6 space-y-4 shadow-2xl">
             <h2 className="text-base font-bold text-zinc-950 flex items-center gap-2">
-              <Plus className="w-4 h-4 text-amber-600" />
+              <Plus className="w-4 h-4 text-[#72202E]" />
               <span>{t.newAppointment}</span>
             </h2>
 
@@ -614,7 +614,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                   value={clientName}
                   onChange={(e) => setClientName(e.target.value)}
                   placeholder={t.namePlaceholder}
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E]"
                 />
               </div>
 
@@ -627,7 +627,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
                   placeholder="11987654321"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E]"
                 />
               </div>
 
@@ -638,7 +638,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                 <select
                   value={serviceId}
                   onChange={(e) => setServiceId(e.target.value)}
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E]"
                 >
                   {services.map((s) => (
                     <option key={s.id} value={s.id}>
@@ -658,7 +658,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                     required
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
                 <div>
@@ -670,7 +670,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                     required
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -684,7 +684,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
                   placeholder="Observação da cliente..."
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
@@ -698,7 +698,7 @@ export const AppointmentsManager: React.FC<AppointmentsManagerProps> = ({
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20"
+                  className="px-5 py-2 rounded-xl bg-[#72202E] text-white font-bold text-xs shadow-md shadow-amber-500/20"
                 >
                   {lang === 'pt' ? 'Salvar Agendamento' : 'Guardar Cita'}
                 </button>

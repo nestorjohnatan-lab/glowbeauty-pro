@@ -110,10 +110,10 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white rounded-2xl p-5 sm:p-6 shadow-md border border-amber-400/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white rounded-2xl p-5 sm:p-6 shadow-md border border-[#72202E]/40/30 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-2 flex-wrap">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-400/20 text-amber-300 border border-amber-400/30 flex items-center gap-1.5">
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#72202E] text-white/20 text-amber-300 border border-[#72202E]/40/30 flex items-center gap-1.5">
               <ClipboardList className="w-3.5 h-3.5 text-amber-400" />
               <span>{stats.total} {lang === 'pt' ? 'fichas registradas' : 'fichas técnicas'}</span>
             </span>
@@ -134,7 +134,7 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
 
         <button
           onClick={() => onOpenNoteModal()}
-          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition-transform active:scale-95 shrink-0"
+          className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition-transform active:scale-95 shrink-0"
         >
           <Plus className="w-4 h-4 stroke-[3]" />
           <span>{t.btnNewClientNote}</span>
@@ -157,7 +157,7 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
               onClick={() => setSelectedFilter(item.id as any)}
               className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-colors flex items-center gap-1.5 ${
                 selectedFilter === item.id
-                  ? 'bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 shadow-xs'
+                  ? 'bg-[#72202E] text-white shadow-xs'
                   : 'bg-white text-zinc-700 hover:bg-zinc-50 border border-zinc-200'
               }`}
             >
@@ -179,7 +179,7 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder={t.searchClientNotesPlaceholder}
-            className="w-full bg-white border border-zinc-200 rounded-xl pl-9 pr-3 py-2 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 shadow-xs"
+            className="w-full bg-white border border-zinc-200 rounded-xl pl-9 pr-3 py-2 text-xs text-zinc-900 placeholder-zinc-400 focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E] shadow-xs"
           />
         </div>
       </div>
@@ -196,7 +196,7 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
           </p>
           <button
             onClick={() => onOpenNoteModal()}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-500 text-zinc-950 font-bold text-xs shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#72202E] text-white hover:bg-[#72202E] text-zinc-950 font-bold text-xs shadow-xs"
           >
             <Plus className="w-3.5 h-3.5 stroke-[3]" />
             <span>{t.btnNewClientNote}</span>
@@ -215,14 +215,14 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
                 className={`bg-white border rounded-2xl p-4 sm:p-5 shadow-xs transition-all hover:shadow-md flex flex-col justify-between gap-4 ${
                   hasAllergies
                     ? 'border-red-200 ring-1 ring-red-400/20'
-                    : 'border-zinc-200 hover:border-amber-300'
+                    : 'border-zinc-200 hover:border-[#72202E]/30'
                 }`}
               >
                 {/* Top: Avatar, Name, Phone & Allergy Badge */}
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200 border-2 border-amber-400/80 flex items-center justify-center text-amber-950 font-bold text-base shadow-xs shrink-0">
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-200 border-2 border-[#72202E]/40/80 flex items-center justify-center text-[#1F1E1D] font-bold text-base shadow-xs shrink-0">
                         {note.clientName.charAt(0).toUpperCase()}
                       </div>
                       <div className="min-w-0">
@@ -230,7 +230,7 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
                           <h3 className="font-bold text-sm sm:text-base text-zinc-950 truncate">
                             {note.clientName}
                           </h3>
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-900 border border-amber-200">
+                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#F4EFEB] text-[#72202E] border border-[#EAE3D9]">
                             Ficha Técnica
                           </span>
                         </div>
@@ -277,29 +277,29 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
                   <div className="space-y-2 text-xs">
                     {/* Eyelashes Specs */}
                     {(note.lashCurvature || note.lashMapping || note.lashLengths) && (
-                      <div className="bg-amber-50/60 border border-amber-200/80 rounded-xl p-2.5 space-y-1">
-                        <div className="flex items-center gap-1.5 font-bold text-amber-900 text-[11px]">
-                          <Eye className="w-3.5 h-3.5 text-amber-700" />
+                      <div className="bg-[#F4EFEB]/60 border border-[#EAE3D9]/80 rounded-xl p-2.5 space-y-1">
+                        <div className="flex items-center gap-1.5 font-bold text-[#72202E] text-[11px]">
+                          <Eye className="w-3.5 h-3.5 text-[#72202E]" />
                           <span>{lang === 'pt' ? 'Cílios / Lashes' : 'Pestañas'}</span>
                         </div>
                         <div className="flex items-center gap-2 flex-wrap text-zinc-800 text-xs">
                           {note.lashCurvature && (
-                            <span className="px-2 py-0.5 rounded-md bg-white border border-amber-200 font-semibold text-amber-950">
+                            <span className="px-2 py-0.5 rounded-md bg-white border border-[#EAE3D9] font-semibold text-[#1F1E1D]">
                               {note.lashCurvature}
                             </span>
                           )}
                           {note.lashThickness && (
-                            <span className="px-2 py-0.5 rounded-md bg-white border border-amber-200 font-medium text-zinc-700">
+                            <span className="px-2 py-0.5 rounded-md bg-white border border-[#EAE3D9] font-medium text-zinc-700">
                               {note.lashThickness}
                             </span>
                           )}
                           {note.lashLengths && (
-                            <span className="px-2 py-0.5 rounded-md bg-white border border-amber-200 font-medium text-zinc-700">
+                            <span className="px-2 py-0.5 rounded-md bg-white border border-[#EAE3D9] font-medium text-zinc-700">
                               {note.lashLengths}
                             </span>
                           )}
                           {note.lashMapping && (
-                            <span className="px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 font-bold">
+                            <span className="px-2 py-0.5 rounded-md bg-[#72202E]/10 text-[#72202E] font-bold">
                               {note.lashMapping}
                             </span>
                           )}
@@ -383,10 +383,10 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
 
                     {/* Client Preferences */}
                     {note.personalPreferences && (
-                      <div className="bg-amber-50/40 border border-amber-200/60 rounded-xl p-2.5 text-xs flex items-start gap-2">
-                        <Heart className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                      <div className="bg-[#F4EFEB]/40 border border-[#EAE3D9]/60 rounded-xl p-2.5 text-xs flex items-start gap-2">
+                        <Heart className="w-3.5 h-3.5 text-[#72202E] shrink-0 mt-0.5" />
                         <div>
-                          <span className="font-bold text-amber-950 text-[11px] block">
+                          <span className="font-bold text-[#1F1E1D] text-[11px] block">
                             Preferencias de atención:
                           </span>
                           <p className="text-zinc-700 font-medium">{note.personalPreferences}</p>
@@ -454,7 +454,7 @@ export const ClientTechnicalNotesSection: React.FC<ClientTechnicalNotesSectionPr
 
                     <button
                       onClick={() => onOpenNoteModal(note)}
-                      className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold text-xs shadow-xs hover:from-amber-500 hover:to-yellow-600 transition-all active:scale-95 flex items-center gap-1"
+                      className="px-3.5 py-1.5 rounded-xl bg-[#72202E] text-white font-bold text-xs shadow-xs hover:from-amber-500 hover:to-yellow-600 transition-all active:scale-95 flex items-center gap-1"
                     >
                       <ClipboardList className="w-3.5 h-3.5" />
                       <span>{t.btnEditClientNote}</span>

@@ -496,7 +496,7 @@ export default function App() {
         />
       ) : (
         /* PRO MANAGEMENT DASHBOARD (Protected by Auth) */
-        <div className="min-h-screen flex flex-col bg-zinc-100 text-zinc-900">
+        <div className="min-h-screen flex flex-col bg-[#FBF9F5] text-[#1F1E1D] selection:bg-[#72202E] selection:text-white">
           <ProHeader
             profile={profile}
             todayCount={todayCount}
