@@ -10,33 +10,33 @@ interface EditorialAboutProps {
 const PILLARS = [
   {
     icon: Sparkles,
-    title: 'Servicio Premium & Materiales Top-Tier',
-    desc: 'Productos importados de la más alta calidad cosmética e hipoalergénicos.'
+    title: 'Serviço Premium & Materiais de Alta Linha',
+    desc: 'Produtos importados da mais alta qualidade cosmética e hipoalergênicos.'
   },
   {
     icon: Coffee,
-    title: 'Bebidas y Mimos de Cortesía',
-    desc: 'Café de especialidad, agua saborizada o una copa de espumante para tu confort.'
+    title: 'Bebidas & Mimos de Cortesia',
+    desc: 'Café expresso, água aromatizada ou uma taça de espumante para seu total conforto.'
   },
   {
     icon: Shield,
-    title: 'Procedimientos Estériles & Seguros',
-    desc: 'Bioseguridad hospitalaria, instrumental esterilizado en autoclave y materiales descartables.'
+    title: 'Procedimentos 100% Estéreis & Biossegurança',
+    desc: 'Biossegurança rigorosa, autoclave hospitalar e materiais 100% descartáveis.'
   },
   {
     icon: Heart,
-    title: 'Atmósfera Cálida & Relajante',
-    desc: 'Espacio boutique diseñado para desconectar del estrés y renovar tu energía.'
+    title: 'Ambiente Acolhedor & Sofisticado',
+    desc: 'Espaço boutique planejado para você relaxar e renovar suas energias.'
   },
   {
     icon: Award,
-    title: 'Especialistas Altamente Calificadas',
-    desc: 'Formación continua en las últimas tendencias internacionales de belleza y visagismo.'
+    title: 'Profissionais Altamente Qualificadas',
+    desc: 'Certificação nas principais técnicas internacionais de beleza e olhar.'
   },
   {
     icon: UserCheck,
-    title: 'Enfoque de Belleza Personalizado',
-    desc: 'Evaluación previa de tu fisonomía para realzar lo mejor de tus rasgos naturales.'
+    title: 'Atendimento Personalizado & Visagismo',
+    desc: 'Mapeamento facial e visagismo sob medida para realçar sua beleza natural.'
   }
 ];
 
@@ -50,7 +50,7 @@ export const EditorialAbout: React.FC<EditorialAboutProps> = ({ profile, onBookC
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-2">
               <span className="text-xs uppercase tracking-[0.25em] text-[#72202E] font-semibold block">
-                Nuestra Filosofía
+                Nossa Filosofia
               </span>
               <h2 className="text-3xl sm:text-5xl font-serif text-[#1F1E1D] uppercase leading-tight">
                 More than a beauty
@@ -61,7 +61,7 @@ export const EditorialAbout: React.FC<EditorialAboutProps> = ({ profile, onBookC
             </div>
 
             <p className="text-sm text-[#5A524C] leading-relaxed max-w-xl">
-              Cada visita está diseñada para ser una experiencia serena, íntima y de lujo donde la excelencia técnica se fusiona con una atención cálida y personalizada.
+              Cada atendimento é pensado para ser um momento de autocuidado, tranquilidade e sofisticação, onde a excelência técnica se une ao carinho de um serviço exclusivo.
             </p>
 
             {/* 6 Pillars Grid */}
@@ -91,7 +91,7 @@ export const EditorialAbout: React.FC<EditorialAboutProps> = ({ profile, onBookC
                 onClick={onBookClick}
                 className="px-8 py-3.5 bg-[#72202E] hover:bg-[#581520] text-white text-xs font-semibold uppercase tracking-[0.18em] transition-colors"
               >
-                Conoce Nuestros Horarios
+                Conheça Nossos Horários
               </button>
             </div>
           </div>
@@ -111,11 +111,11 @@ export const EditorialAbout: React.FC<EditorialAboutProps> = ({ profile, onBookC
                 <div className="flex items-center gap-2 text-[#72202E]">
                   <MapPin className="w-4 h-4 shrink-0" />
                   <span className="text-xs font-bold uppercase tracking-wider text-[#1F1E1D]">
-                    {profile.businessName || 'Estudio Exclusivo'}
+                    {profile.businessName || 'Estúdio Exclusivo'}
                   </span>
                 </div>
                 <p className="text-xs text-[#5A524C] pl-6">
-                  {profile.address || 'Atención personalizada con cita previa'}
+                  {profile.address || 'Atendimento exclusivo com hora marcada'}
                   {profile.city ? ` · ${profile.city}` : ''}
                 </p>
               </div>
@@ -127,3 +127,4 @@ export const EditorialAbout: React.FC<EditorialAboutProps> = ({ profile, onBookC
     </section>
   );
 };
+

@@ -717,18 +717,18 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
     <div className="space-y-6 pb-24">
       {/* Toast Feedback Alert */}
       {saveFeedback && (
-        <div className="fixed top-20 right-4 z-50 bg-amber-400 text-zinc-950 font-bold px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2 border border-amber-300 animate-bounce">
+        <div className="fixed top-20 right-4 z-50 bg-[#72202E] text-white text-zinc-950 font-bold px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-2 border border-[#72202E]/30 animate-bounce">
           <Check className="w-4 h-4 stroke-[3]" />
           <span className="text-xs">{saveFeedback}</span>
         </div>
       )}
 
       {/* Top Banner - Luxurious Gold, Black & Light Gray */}
-      <div className="bg-gradient-to-r from-white via-zinc-50 to-amber-50/50 border border-amber-300/70 rounded-2xl p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-white via-zinc-50 to-amber-50/50 border border-[#72202E]/30/70 rounded-2xl p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+            <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Design Dourado, Preto & Cinza' : 'Diseño Dorado, Negro & Gris'}</span>
             </span>
           </div>
@@ -742,9 +742,9 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
         <button
           onClick={onPreviewClientView}
-          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-200 text-xs font-semibold shadow-xs transition-colors hover:border-amber-400"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-zinc-50 text-zinc-900 border border-zinc-200 text-xs font-semibold shadow-xs transition-colors hover:border-[#72202E]/40"
         >
-          <Eye className="w-4 h-4 text-amber-600" />
+          <Eye className="w-4 h-4 text-[#72202E]" />
           <span>{t.previewClientBtn}</span>
         </button>
       </div>
@@ -755,7 +755,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           onClick={() => setActiveTab('profile')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'profile'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -767,7 +767,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           onClick={() => setActiveTab('payments')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'payments'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -782,7 +782,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           onClick={() => setActiveTab('schedule')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'schedule'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -797,7 +797,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           onClick={() => setActiveTab('space_photos')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'space_photos'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -812,7 +812,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           onClick={() => setActiveTab('highlights')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'highlights'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -827,7 +827,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           onClick={() => setActiveTab('share')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'share'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -839,7 +839,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           onClick={() => setActiveTab('tutorials')}
           className={`px-4 py-2 rounded-xl text-xs font-medium flex items-center gap-2 transition-all whitespace-nowrap ${
             activeTab === 'tutorials'
-              ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold shadow-xs'
+              ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold shadow-xs'
               : 'text-zinc-600 hover:text-zinc-950 hover:bg-white'
           }`}
         >
@@ -867,7 +867,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
               {/* Cover change controls */}
               <div className="absolute top-3 right-3 flex items-center gap-2">
                 <label className="cursor-pointer bg-white/95 hover:bg-white text-zinc-950 px-3 py-1.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 border border-zinc-200 backdrop-blur-md transition-colors shadow-xs">
-                  <Upload className="w-3.5 h-3.5 text-amber-600" />
+                  <Upload className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{lang === 'pt' ? 'Alterar Foto de Capa' : 'Cambiar Portada'}</span>
                   <input type="file" accept="image/*" onChange={handleCoverUpload} className="hidden" />
                 </label>
@@ -879,14 +879,14 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
               <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 -mt-16 sm:-mt-20 mb-4">
                 {/* Avatar with Metallic Gold Gradient Ring */}
                 <div className="relative group">
-                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-amber-300 via-amber-400 to-yellow-500 shadow-xl">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-tr from-[#C4A480] via-[#E6C280] to-[#72202E] shadow-xl">
                     <img
                       src={avatarUrl}
                       alt={name}
                       className="w-full h-full object-cover rounded-full bg-zinc-100"
                     />
                   </div>
-                  <label className="absolute bottom-1 right-1 p-2 rounded-full bg-white border border-zinc-200 text-zinc-900 hover:text-amber-600 shadow-md cursor-pointer transition-transform active:scale-90" title="Subir foto de perfil">
+                  <label className="absolute bottom-1 right-1 p-2 rounded-full bg-white border border-zinc-200 text-zinc-900 hover:text-[#72202E] shadow-md cursor-pointer transition-transform active:scale-90" title="Subir foto de perfil">
                     <Camera className="w-4 h-4" />
                     <input type="file" accept="image/*" onChange={handleAvatarUpload} className="hidden" />
                   </label>
@@ -916,7 +916,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
               {/* Avatar Presets Selector */}
               <div className="mb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-zinc-50 p-3 rounded-xl border border-zinc-200">
                 <span className="text-[11px] text-zinc-800 font-semibold flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{lang === 'pt' ? 'Escolha sua Foto de Perfil (salva instantaneamente):' : 'Fotos de perfil sugeridas:'}</span>
                 </span>
                 <div className="flex items-center gap-2">
@@ -948,7 +948,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Ex: Camila Santos"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -961,10 +961,10 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                       <button
                         type="button"
                         onClick={() => handleGenerateFromSalonName()}
-                        className="text-[11px] font-semibold text-amber-700 hover:text-amber-900 flex items-center gap-1 transition-colors hover:underline cursor-pointer"
+                        className="text-[11px] font-semibold text-[#72202E] hover:text-[#72202E] flex items-center gap-1 transition-colors hover:underline cursor-pointer"
                         title={lang === 'pt' ? 'Gerar link da agenda usando o nome do salão' : 'Generar link de difusión con este nombre'}
                       >
-                        <Wand2 className="w-3 h-3 text-amber-600" />
+                        <Wand2 className="w-3 h-3 text-[#72202E]" />
                         <span>{lang === 'pt' ? 'Usar no Link' : 'Usar en Enlace'}</span>
                       </button>
                     )}
@@ -975,7 +975,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={businessName}
                     onChange={(e) => setBusinessName(e.target.value)}
                     placeholder="Ex: Camila Santos · Studio & Lash Design"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                   <p className="text-[11px] text-zinc-500 mt-1">
                     {lang === 'pt' ? 'Nome oficial do seu salão ou estúdio de beleza.' : 'Nombre oficial de tu salón o estudio de belleza.'}
@@ -985,16 +985,16 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 <div className="sm:col-span-2">
                   <div className="flex items-center justify-between mb-1">
                     <label className="text-xs font-semibold text-zinc-700 flex items-center gap-1.5">
-                      <Link2 className="w-3.5 h-3.5 text-amber-600" />
+                      <Link2 className="w-3.5 h-3.5 text-[#72202E]" />
                       <span>{t.slugLabel}</span>
                     </label>
                     <button
                       type="button"
                       onClick={() => handleGenerateFromSalonName()}
-                      className="text-xs font-semibold text-amber-900 bg-amber-100 hover:bg-amber-200 px-2.5 py-1 rounded-lg border border-amber-300 flex items-center gap-1.5 transition-colors cursor-pointer"
+                      className="text-xs font-semibold text-[#72202E] bg-[#72202E]/10 hover:bg-amber-200 px-2.5 py-1 rounded-lg border border-[#72202E]/30 flex items-center gap-1.5 transition-colors cursor-pointer"
                       title={lang === 'pt' ? `Gerar link com o nome: ${suggestedSalonSlug}` : `Generar enlace con el nombre: ${suggestedSalonSlug}`}
                     >
-                      <Wand2 className="w-3 h-3 text-amber-700" />
+                      <Wand2 className="w-3 h-3 text-[#72202E]" />
                       <span>{t.useSalonNameAction || (lang === 'pt' ? 'Tomar Nome do Salão' : 'Tomar Nombre del Salón')}</span>
                     </button>
                   </div>
@@ -1007,12 +1007,12 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                       value={slug}
                       onChange={(e) => handleSlugChange(e.target.value)}
                       placeholder="camila-studio"
-                      className="w-full bg-zinc-50 border border-zinc-300 rounded-r-xl px-3.5 py-2.5 text-sm font-mono text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                      className="w-full bg-zinc-50 border border-zinc-300 rounded-r-xl px-3.5 py-2.5 text-sm font-mono text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                     />
                   </div>
                   <div className="flex items-center justify-between text-[11px] text-zinc-500 mt-1">
                     <span>{t.slugHelper}</span>
-                    <span className="font-mono text-amber-800 font-semibold truncate max-w-xs">
+                    <span className="font-mono text-[#72202E] font-semibold truncate max-w-xs">
                       ...&pro={activeSlug}
                     </span>
                   </div>
@@ -1027,7 +1027,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={headline}
                     onChange={(e) => setHeadline(e.target.value)}
                     placeholder="Ex: Master Lash Designer & Micropigmentadora Certificada"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1044,7 +1044,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                         ? 'Conte um pouco sobre sua trajetória, especialidades e o carinho com que atende suas clientes...'
                         : 'Sobre ti y tus servicios...'
                     }
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -1053,8 +1053,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
           {/* Contact, Social Networks & Brazil PIX Card */}
           <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
-              <Instagram className="w-4 h-4 text-amber-600" />
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-2">
+              <Instagram className="w-4 h-4 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Redes Sociais, WhatsApp & Chave PIX' : 'Redes Sociales & Pagos'}</span>
             </h2>
 
@@ -1069,13 +1069,13 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={whatsapp}
                   onChange={(e) => setWhatsapp(e.target.value)}
                   placeholder="Ex: +55 11 98921-8844"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-semibold text-zinc-700 mb-1 flex items-center gap-1.5">
-                  <Instagram className="w-3.5 h-3.5 text-amber-600" />
+                  <Instagram className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{t.instagramHandle}</span>
                 </label>
                 <input
@@ -1083,13 +1083,13 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={instagram}
                   onChange={(e) => setInstagram(e.target.value)}
                   placeholder="@camilasantos.beauty"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-semibold text-zinc-700 mb-1 flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{t.tiktokHandle}</span>
                 </label>
                 <input
@@ -1097,14 +1097,14 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={tiktok}
                   onChange={(e) => setTiktok(e.target.value)}
                   placeholder="@camilasantos.lashes"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
               {/* PIX Key */}
               <div>
                 <label className="block text-xs font-semibold text-zinc-700 mb-1 flex items-center gap-1.5">
-                  <CreditCard className="w-3.5 h-3.5 text-amber-600" />
+                  <CreditCard className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{t.pixKeyLabel}</span>
                 </label>
                 <div className="flex gap-2">
@@ -1129,15 +1129,15 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                       setPixKeyVal(e.target.value);
                     }}
                     placeholder="11989218844 ou email"
-                    className="flex-1 bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="flex-1 bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
 
               {/* Full Bank & PIX Setup Banner */}
-              <div className="sm:col-span-2 bg-gradient-to-r from-amber-50/90 via-white to-amber-50/50 border border-amber-300 rounded-xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+              <div className="sm:col-span-2 bg-gradient-to-r from-amber-50/90 via-white to-amber-50/50 border border-[#72202E]/30 rounded-xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-amber-400 text-zinc-950 font-bold flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-9 h-9 rounded-xl bg-[#72202E] text-white text-zinc-950 font-bold flex items-center justify-center shrink-0 shadow-xs">
                     <Wallet className="w-5 h-5 stroke-[2.2]" />
                   </div>
                   <div>
@@ -1165,8 +1165,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
           {/* Location & Address Card */}
           <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-amber-600" />
+            <h2 className="text-sm font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Localização & Endereço do Estúdio' : 'Ubicación'}</span>
             </h2>
 
@@ -1180,7 +1180,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   placeholder="Ex: Rua Oscar Freire, 1240 - Sala 42"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
@@ -1193,7 +1193,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={neighborhood}
                   onChange={(e) => setNeighborhood(e.target.value)}
                   placeholder="Ex: Jardins / Cerqueira César"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
@@ -1207,7 +1207,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="São Paulo"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
                 <div className="w-24">
@@ -1219,7 +1219,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={state}
                     onChange={(e) => setState(e.target.value)}
                     placeholder="SP"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500 uppercase"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E] uppercase"
                   />
                 </div>
               </div>
@@ -1231,7 +1231,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 <select
                   value={currency}
                   onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 >
                   {CURRENCIES.map((c) => (
                     <option key={c.code} value={c.code}>
@@ -1241,10 +1241,10 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 </select>
               </div>
 
-              <div className="sm:col-span-2 bg-gradient-to-r from-amber-50/60 to-zinc-50 border border-amber-200/80 rounded-xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
+              <div className="sm:col-span-2 bg-gradient-to-r from-amber-50/60 to-zinc-50 border border-[#EAE3D9]/80 rounded-xl p-3.5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-lg bg-amber-400/20 border border-amber-300 flex items-center justify-center text-amber-800 shrink-0">
-                    <Clock className="w-4 h-4 text-amber-700" />
+                  <div className="w-9 h-9 rounded-lg bg-[#72202E] text-white/20 border border-[#72202E]/30 flex items-center justify-center text-[#72202E] shrink-0">
+                    <Clock className="w-4 h-4 text-[#72202E]" />
                   </div>
                   <div>
                     <span className="text-xs font-bold text-zinc-950 block">
@@ -1261,9 +1261,9 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 <button
                   type="button"
                   onClick={() => setActiveTab('schedule')}
-                  className="px-3.5 py-1.5 rounded-lg bg-white hover:bg-zinc-50 border border-zinc-200 text-xs font-semibold text-zinc-900 shadow-xs flex items-center gap-1.5 transition-colors hover:border-amber-400 shrink-0"
+                  className="px-3.5 py-1.5 rounded-lg bg-white hover:bg-zinc-50 border border-zinc-200 text-xs font-semibold text-zinc-900 shadow-xs flex items-center gap-1.5 transition-colors hover:border-[#72202E]/40 shrink-0"
                 >
-                  <CalendarCheck className="w-3.5 h-3.5 text-amber-600" />
+                  <CalendarCheck className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{lang === 'pt' ? 'Configurar Dias & Horas' : 'Configurar Horarios'}</span>
                 </button>
               </div>
@@ -1278,7 +1278,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
             <button
               type="submit"
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-sm shadow-md shadow-amber-500/20 flex items-center gap-2 transition-transform active:scale-95"
+              className="px-6 py-3 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-sm shadow-md shadow-amber-500/20 flex items-center gap-2 transition-transform active:scale-95"
             >
               <Save className="w-4 h-4" />
               <span>{t.saveProfileBtn}</span>
@@ -1291,11 +1291,11 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
       {activeTab === 'payments' && (
         <form onSubmit={handleSaveBankDetails} className="space-y-6">
           {/* Header Card */}
-          <div className="bg-gradient-to-r from-white via-amber-50/40 to-yellow-50/30 border border-amber-300 rounded-2xl p-6 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="bg-gradient-to-r from-white via-amber-50/40 to-yellow-50/30 border border-[#72202E]/30 rounded-2xl p-6 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-950 border border-amber-300 flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+                <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#72202E]/10 text-[#1F1E1D] border border-[#72202E]/30 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{lang === 'pt' ? 'Automação WhatsApp & Agendamento' : 'Automatización WhatsApp & Citas'}</span>
                 </span>
                 <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
@@ -1303,7 +1303,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 </span>
               </div>
               <h2 className="text-xl sm:text-2xl font-serif font-bold text-zinc-950 flex items-center gap-2">
-                <CreditCard className="w-6 h-6 text-amber-600" />
+                <CreditCard className="w-6 h-6 text-[#72202E]" />
                 <span>{t.paymentsTitle}</span>
               </h2>
               <p className="text-xs sm:text-sm text-zinc-600 max-w-2xl leading-relaxed">
@@ -1315,14 +1315,14 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
               <button
                 type="button"
                 onClick={handleCopySimulatedBankText}
-                className="px-3.5 py-2.5 rounded-xl bg-white border border-zinc-200 hover:border-amber-400 text-zinc-800 text-xs font-semibold flex items-center gap-1.5 shadow-2xs transition-colors"
+                className="px-3.5 py-2.5 rounded-xl bg-white border border-zinc-200 hover:border-[#72202E]/40 text-zinc-800 text-xs font-semibold flex items-center gap-1.5 shadow-2xs transition-colors"
               >
-                {copiedBankText ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-amber-600" />}
+                {copiedBankText ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#72202E]" />}
                 <span>{copiedBankText ? t.paymentDetailsCopied : t.copyPaymentDetailsBtn}</span>
               </button>
               <button
                 type="submit"
-                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 flex items-center gap-1.5 transition-transform active:scale-95"
+                className="px-5 py-2.5 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs shadow-md shadow-amber-500/20 flex items-center gap-1.5 transition-transform active:scale-95"
               >
                 <Save className="w-4 h-4" />
                 <span>{lang === 'pt' ? 'Salvar Dados' : 'Guardar Datos'}</span>
@@ -1332,8 +1332,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
           {/* Section 1: Preferred Payment Method Selection */}
           <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
-              <Wallet className="w-4 h-4 text-amber-600" />
+            <h3 className="text-sm font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-2">
+              <Wallet className="w-4 h-4 text-[#72202E]" />
               <span>{t.paymentPreferenceLabel}</span>
             </h3>
 
@@ -1343,16 +1343,16 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 onClick={() => setPreferenceMethod('pix')}
                 className={`p-4 rounded-xl border text-left transition-all flex flex-col gap-1.5 ${
                   preferenceMethod === 'pix'
-                    ? 'bg-amber-50/70 border-amber-400 shadow-xs ring-1 ring-amber-400'
+                    ? 'bg-[#F4EFEB]/70 border-[#72202E]/40 shadow-xs ring-1 ring-amber-400'
                     : 'bg-zinc-50 border-zinc-200 hover:border-zinc-300'
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-xs text-zinc-950 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                    <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
                     <span>{t.prefPixOnly}</span>
                   </span>
-                  {preferenceMethod === 'pix' && <Check className="w-4 h-4 text-amber-700 stroke-[3]" />}
+                  {preferenceMethod === 'pix' && <Check className="w-4 h-4 text-[#72202E] stroke-[3]" />}
                 </div>
                 <p className="text-[11px] text-zinc-500">
                   {lang === 'pt' ? 'Chave rápida (CPF, celular, e-mail). Ideal no Brasil.' : 'Llave rápida para cobro instantáneo.'}
@@ -1364,16 +1364,16 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 onClick={() => setPreferenceMethod('bank_transfer')}
                 className={`p-4 rounded-xl border text-left transition-all flex flex-col gap-1.5 ${
                   preferenceMethod === 'bank_transfer'
-                    ? 'bg-amber-50/70 border-amber-400 shadow-xs ring-1 ring-amber-400'
+                    ? 'bg-[#F4EFEB]/70 border-[#72202E]/40 shadow-xs ring-1 ring-amber-400'
                     : 'bg-zinc-50 border-zinc-200 hover:border-zinc-300'
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-xs text-zinc-950 flex items-center gap-1.5">
-                    <Building className="w-3.5 h-3.5 text-amber-600" />
+                    <Building className="w-3.5 h-3.5 text-[#72202E]" />
                     <span>{t.prefBankOnly}</span>
                   </span>
-                  {preferenceMethod === 'bank_transfer' && <Check className="w-4 h-4 text-amber-700 stroke-[3]" />}
+                  {preferenceMethod === 'bank_transfer' && <Check className="w-4 h-4 text-[#72202E] stroke-[3]" />}
                 </div>
                 <p className="text-[11px] text-zinc-500">
                   {lang === 'pt' ? 'Banco, agência, conta corrente ou poupança.' : 'Banco, número de cuenta y CLABE / CBU.'}
@@ -1385,16 +1385,16 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 onClick={() => setPreferenceMethod('both')}
                 className={`p-4 rounded-xl border text-left transition-all flex flex-col gap-1.5 ${
                   preferenceMethod === 'both'
-                    ? 'bg-amber-50/70 border-amber-400 shadow-xs ring-1 ring-amber-400'
+                    ? 'bg-[#F4EFEB]/70 border-[#72202E]/40 shadow-xs ring-1 ring-amber-400'
                     : 'bg-zinc-50 border-zinc-200 hover:border-zinc-300'
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-xs text-zinc-950 flex items-center gap-1.5">
-                    <CreditCard className="w-3.5 h-3.5 text-amber-600" />
+                    <CreditCard className="w-3.5 h-3.5 text-[#72202E]" />
                     <span>{t.prefBoth}</span>
                   </span>
-                  {preferenceMethod === 'both' && <Check className="w-4 h-4 text-amber-700 stroke-[3]" />}
+                  {preferenceMethod === 'both' && <Check className="w-4 h-4 text-[#72202E] stroke-[3]" />}
                 </div>
                 <p className="text-[11px] text-zinc-500">
                   {lang === 'pt' ? 'Oferece ambas as opções na mensagem da cliente.' : 'Ofrece ambas alternativas en el mensaje.'}
@@ -1407,8 +1407,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           {(preferenceMethod === 'pix' || preferenceMethod === 'both') && (
             <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
               <div className="flex items-center justify-between">
-                <h3 className="text-sm font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-amber-600" />
+                <h3 className="text-sm font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-[#72202E]" />
                   <span>{lang === 'pt' ? 'Configuração da Chave PIX (Brasil)' : 'Datos de Llave PIX'}</span>
                 </h3>
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
@@ -1427,7 +1427,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                       setPixKeyType(e.target.value as PixKeyType);
                       setPixType(e.target.value as any);
                     }}
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   >
                     <option value="celular">Celular / Teléfono</option>
                     <option value="cpf">CPF (Pessoa Física)</option>
@@ -1455,7 +1455,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                       pixKeyType === 'email' ? 'Ex: pagamentos@meustudio.com.br' :
                       'Ex: 123e4567-e89b-12d3-a456-426614174000'
                     }
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1468,7 +1468,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={pixBeneficiaryName}
                     onChange={(e) => setPixBeneficiaryName(e.target.value)}
                     placeholder="Ex: Camila Santos · Studio & Lash"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1481,7 +1481,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={pixCity}
                     onChange={(e) => setPixCity(e.target.value)}
                     placeholder="Ex: São Paulo"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -1491,8 +1491,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           {/* Section 3: Traditional Bank Account Details */}
           {(preferenceMethod === 'bank_transfer' || preferenceMethod === 'both') && (
             <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
-                <Building className="w-4 h-4 text-amber-600" />
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-2">
+                <Building className="w-4 h-4 text-[#72202E]" />
                 <span>{lang === 'pt' ? 'Dados da Conta Bancária para Transferência' : 'Datos Bancarios para Transferencia'}</span>
               </h3>
 
@@ -1506,7 +1506,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={bankName}
                     onChange={(e) => setBankName(e.target.value)}
                     placeholder="Ex: Nubank, Banco do Brasil, Itaú, BBVA, Santander, Bancolombia"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1517,7 +1517,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   <select
                     value={accountType}
                     onChange={(e) => setAccountType(e.target.value as BankAccountType)}
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   >
                     <option value="corrente">{t.accountTypeChecking}</option>
                     <option value="poupanca">{t.accountTypeSavings}</option>
@@ -1535,7 +1535,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={agencyNumber}
                     onChange={(e) => setAgencyNumber(e.target.value)}
                     placeholder="Ex: 0001 (Agência)"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1548,7 +1548,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={accountNumber}
                     onChange={(e) => setAccountNumber(e.target.value)}
                     placeholder="Ex: 9283741-2"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 font-mono focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1561,7 +1561,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={accountHolderName}
                     onChange={(e) => setAccountHolderName(e.target.value)}
                     placeholder="Ex: Camila Santos de Oliveira"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1574,7 +1574,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={accountHolderDocument}
                     onChange={(e) => setAccountHolderDocument(e.target.value)}
                     placeholder="Ex: 348.912.448-90 (CPF / RFC / RUT / DNI)"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -1587,7 +1587,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={interbankCodeOrAlias}
                     onChange={(e) => setInterbankCodeOrAlias(e.target.value)}
                     placeholder="Ex: CLABE interbancaria (México), CBU/Alias (Argentina), Nequi (Colombia), ou Chave de Transferência"
-                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -1596,8 +1596,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
           {/* Section 4: Deposit / Sinal Policy & Instructions */}
           <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-amber-600" />
+            <h3 className="text-sm font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Política de Sinal, Adiantamento & Comprovantes' : 'Política de Anticipo & Reserva'}</span>
             </h3>
 
@@ -1642,7 +1642,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                       setDepositFixedAmount(e.target.value);
                     }}
                     placeholder="30"
-                    className="flex-1 bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 font-bold focus:bg-white focus:outline-none focus:border-amber-500"
+                    className="flex-1 bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 font-bold focus:bg-white focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -1654,7 +1654,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 <select
                   value={paymentDeadlineHours}
                   onChange={(e) => setPaymentDeadlineHours(e.target.value)}
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3.5 py-2.5 text-sm text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 >
                   <option value="1">1 {lang === 'pt' ? 'hora após o agendamento' : 'hora tras reservar'}</option>
                   <option value="2">2 {lang === 'pt' ? 'horas (Recomendado)' : 'horas (Recomendado)'}</option>
@@ -1673,7 +1673,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={instructions}
                   onChange={(e) => setInstructions(e.target.value)}
                   placeholder={t.paymentInstructionsPlaceholder}
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
             </div>
@@ -1682,7 +1682,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           {/* Section 5: Real-time Live WhatsApp Preview of Confirmation Message */}
           <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-2">
                 <Send className="w-4 h-4 text-emerald-600" />
                 <span>{t.liveConfirmationPreviewTitle}</span>
               </h3>
@@ -1697,13 +1697,13 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 : 'Este es el bloque que se insertará en tus mensajes de WhatsApp:'}
             </p>
 
-            <div className="bg-zinc-950 text-zinc-100 p-4 rounded-2xl border border-zinc-800 font-mono text-xs whitespace-pre-wrap leading-relaxed shadow-inner selection:bg-amber-400 selection:text-zinc-950">
+            <div className="bg-zinc-950 text-zinc-100 p-4 rounded-2xl border border-zinc-800 font-mono text-xs whitespace-pre-wrap leading-relaxed shadow-inner selection:bg-[#72202E] text-white selection:text-zinc-950">
               {simulatedBankText}
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
               <div className="text-[11px] text-zinc-500 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                <Sparkles className="w-3.5 h-3.5 text-[#72202E] shrink-0" />
                 <span>
                   {lang === 'pt'
                     ? 'Disponível instantaneamente na Agenda (botão "Confirmar & PIX") e na Central de Alertas.'
@@ -1717,13 +1717,13 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   onClick={handleCopySimulatedBankText}
                   className="px-4 py-2.5 rounded-xl bg-zinc-100 hover:bg-zinc-200 text-zinc-800 text-xs font-semibold flex items-center gap-1.5 transition-colors"
                 >
-                  {copiedBankText ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-amber-600" />}
+                  {copiedBankText ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4 text-[#72202E]" />}
                   <span>{copiedBankText ? t.paymentDetailsCopied : t.copyPaymentDetailsBtn}</span>
                 </button>
 
                 <button
                   type="submit"
-                  className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 flex items-center gap-1.5 transition-transform active:scale-95"
+                  className="px-6 py-2.5 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs shadow-md shadow-amber-500/20 flex items-center gap-1.5 transition-transform active:scale-95"
                 >
                   <Save className="w-4 h-4" />
                   <span>{lang === 'pt' ? 'Salvar Configurações' : 'Guardar Configuración'}</span>
@@ -1749,7 +1749,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
             <div>
               <h2 className="text-base font-bold text-zinc-950 flex items-center gap-2">
-                <Camera className="w-5 h-5 text-amber-600" />
+                <Camera className="w-5 h-5 text-[#72202E]" />
                 <span>{t.salonSpacePhotosTitle}</span>
               </h2>
               <p className="text-xs text-zinc-500 mt-1">
@@ -1760,11 +1760,11 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
             {/* Add New Space Photo Box */}
             <div className="bg-zinc-50 border border-zinc-200 rounded-xl p-4 space-y-3">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <span className="text-xs font-semibold text-amber-800 block">
+                <span className="text-xs font-semibold text-[#72202E] block">
                   + {t.addSalonPhotoBtn}
                 </span>
 
-                <label className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold text-xs shadow-xs hover:from-amber-300 hover:to-yellow-400 transition-all self-start sm:self-auto">
+                <label className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#72202E] text-white font-bold text-xs shadow-xs hover:from-amber-300 hover:to-yellow-400 transition-all self-start sm:self-auto">
                   <Upload className="w-3.5 h-3.5 stroke-[2.5]" />
                   <span>{isUploadingSpacePhoto ? t.uploadingPhoto : t.uploadFromGalleryBtn}</span>
                   <input
@@ -1783,14 +1783,14 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={newPhotoUrl}
                   onChange={(e) => setNewPhotoUrl(e.target.value)}
                   placeholder="https://images.unsplash.com/..."
-                  className="bg-white border border-zinc-300 rounded-lg px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                  className="bg-white border border-zinc-300 rounded-lg px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                 />
                 <input
                   type="text"
                   value={newPhotoTitle}
                   onChange={(e) => setNewPhotoTitle(e.target.value)}
                   placeholder={lang === 'pt' ? 'Ex: Maca com iluminação Ring Light' : 'Título de la foto'}
-                  className="bg-white border border-zinc-300 rounded-lg px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                  className="bg-white border border-zinc-300 rounded-lg px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
@@ -1805,7 +1805,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                       key={idx}
                       type="button"
                       onClick={() => handleAddSpacePhoto(p.url, p.title)}
-                      className="px-2 py-1 rounded-md bg-white text-[10px] text-zinc-700 hover:text-amber-700 hover:bg-amber-50 whitespace-nowrap border border-zinc-200"
+                      className="px-2 py-1 rounded-md bg-white text-[10px] text-zinc-700 hover:text-[#72202E] hover:bg-[#F4EFEB] whitespace-nowrap border border-zinc-200"
                     >
                       + {p.title.split(' ')[0]}
                     </button>
@@ -1816,7 +1816,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   type="button"
                   onClick={() => handleAddSpacePhoto(newPhotoUrl, newPhotoTitle)}
                   disabled={!newPhotoUrl.trim()}
-                  className="px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 disabled:opacity-40 text-zinc-950 font-bold text-xs shrink-0 flex items-center justify-center gap-1 shadow-sm"
+                  className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#72202E] to-[#581520] hover:from-amber-500 hover:to-yellow-600 disabled:opacity-40 text-zinc-950 font-bold text-xs shrink-0 flex items-center justify-center gap-1 shadow-sm"
                 >
                   <Plus className="w-3.5 h-3.5" />
                   <span>{lang === 'pt' ? 'Adicionar Foto' : 'Agregar Foto'}</span>
@@ -1888,7 +1888,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h2 className="text-base font-bold text-zinc-950 flex items-center gap-2">
-                  <Share2 className="w-5 h-5 text-amber-600" />
+                  <Share2 className="w-5 h-5 text-[#72202E]" />
                   <span>{t.shareTitle}</span>
                 </h2>
                 <p className="text-xs text-zinc-500 mt-1">
@@ -1911,7 +1911,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   onClick={onPreviewClientView}
                   className="px-3.5 py-2 rounded-xl bg-white hover:bg-zinc-50 text-zinc-800 border border-zinc-200 text-xs font-semibold shadow-xs flex items-center gap-1.5 transition-colors"
                 >
-                  <ExternalLink className="w-3.5 h-3.5 text-amber-600" />
+                  <ExternalLink className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{t.openMyLinkBtn}</span>
                 </button>
               </div>
@@ -1921,12 +1921,12 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
             <div className="bg-zinc-50 border border-zinc-200 rounded-2xl p-5 space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm">
+                  <div className="w-8 h-8 rounded-xl bg-[#72202E]/10 text-[#72202E] flex items-center justify-center font-bold text-sm">
                     1
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-zinc-900 flex items-center gap-1.5">
-                      <Link2 className="w-4 h-4 text-amber-600" />
+                      <Link2 className="w-4 h-4 text-[#72202E]" />
                       <span>{t.customizeLinkTitle}</span>
                     </h3>
                     <p className="text-[11px] text-zinc-500">
@@ -1939,7 +1939,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   <button
                     type="button"
                     onClick={handleCopyLink}
-                    className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/20 active:scale-95 transition-transform cursor-pointer"
+                    className="px-3.5 py-2 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/20 active:scale-95 transition-transform cursor-pointer"
                   >
                     {copiedLink ? <Check className="w-3.5 h-3.5 text-zinc-950 stroke-[3]" /> : <Copy className="w-3.5 h-3.5" />}
                     <span>{copiedLink ? t.linkCopied : t.copyLinkBtn}</span>
@@ -1950,13 +1950,13 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     className="p-2 rounded-xl bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-300 shadow-xs cursor-pointer"
                     title={t.openMyLinkBtn}
                   >
-                    <ExternalLink className="w-3.5 h-3.5 text-amber-600" />
+                    <ExternalLink className="w-3.5 h-3.5 text-[#72202E]" />
                   </button>
                 </div>
               </div>
 
               {/* GENERADOR RÁPIDO: Generar Link con el Nombre del Salón */}
-              <div className="bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/5 border-2 border-amber-400/40 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-xs">
+              <div className="bg-gradient-to-r from-amber-500/10 via-yellow-500/10 to-amber-500/5 border-2 border-[#72202E]/40/40 rounded-2xl p-4 sm:p-5 space-y-3.5 shadow-xs">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-zinc-950 flex items-center justify-center shadow-sm shrink-0">
@@ -1967,7 +1967,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                         <h4 className="text-sm font-bold text-zinc-900">
                           {t.generateFromSalonBtn || (lang === 'pt' ? 'Gerar Link com Nome do Salão' : 'Generar Enlace con Nombre del Salón')}
                         </h4>
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-400 text-zinc-950">
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#72202E] text-white text-zinc-950">
                           {lang === 'pt' ? '1-Clique' : '1-Clic'}
                         </span>
                       </div>
@@ -1980,7 +1980,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   <button
                     type="button"
                     onClick={() => handleGenerateFromSalonName()}
-                    className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-amber-500/20 active:scale-95 transition-all shrink-0 cursor-pointer"
+                    className="px-4 py-2.5 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-amber-500/20 active:scale-95 transition-all shrink-0 cursor-pointer"
                   >
                     <Wand2 className="w-4 h-4 text-zinc-950 stroke-[2.5]" />
                     <span>{t.useSalonNameAction || (lang === 'pt' ? 'Usar Nome do Salão' : 'Usar Nombre del Salón')}</span>
@@ -1988,13 +1988,13 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 </div>
 
                 {/* Current salon name pill & Quick presets */}
-                <div className="bg-white/90 backdrop-blur-xs border border-amber-200/80 rounded-xl p-3 flex flex-col md:flex-row md:items-center justify-between gap-2.5">
+                <div className="bg-white/90 backdrop-blur-xs border border-[#EAE3D9]/80 rounded-xl p-3 flex flex-col md:flex-row md:items-center justify-between gap-2.5">
                   <div className="flex items-center gap-2 text-xs text-zinc-700">
-                    <Store className="w-4 h-4 text-amber-600 shrink-0" />
+                    <Store className="w-4 h-4 text-[#72202E] shrink-0" />
                     <span className="text-zinc-500 font-medium">
                       {t.currentSalonNameLabel || (lang === 'pt' ? 'Nome do Salão Atual:' : 'Nombre del Salón Actual:')}
                     </span>
-                    <span className="font-bold text-zinc-900 bg-amber-100/70 px-2 py-0.5 rounded-md border border-amber-200 truncate max-w-xs">
+                    <span className="font-bold text-zinc-900 bg-[#72202E]/10/70 px-2 py-0.5 rounded-md border border-[#EAE3D9] truncate max-w-xs">
                       {businessName || name || (lang === 'pt' ? 'Meu Estúdio' : 'Mi Salón')}
                     </span>
                   </div>
@@ -2011,8 +2011,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                           onClick={() => handleGenerateFromSalonName(preset.slugVal)}
                           className={`px-2.5 py-1 rounded-lg text-[11px] font-medium border flex items-center gap-1 transition-all cursor-pointer ${
                             slug === preset.slugVal
-                              ? 'bg-amber-500 text-zinc-950 border-amber-600 font-bold shadow-2xs'
-                              : 'bg-zinc-50 hover:bg-amber-50 text-zinc-700 hover:text-zinc-900 border-zinc-200 hover:border-amber-300'
+                              ? 'bg-[#72202E] text-zinc-950 border-amber-600 font-bold shadow-2xs'
+                              : 'bg-zinc-50 hover:bg-[#F4EFEB] text-zinc-700 hover:text-zinc-900 border-zinc-200 hover:border-[#72202E]/30'
                           }`}
                           title={`Usar: ${preset.slugVal}`}
                         >
@@ -2039,13 +2039,13 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
               </div>
 
               {/* Active Link Indicator Card */}
-              <div className="bg-amber-50/90 border border-amber-200 rounded-xl p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+              <div className="bg-[#F4EFEB]/90 border border-[#EAE3D9] rounded-xl p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                 <div className="flex items-center gap-2 text-xs min-w-0">
-                  <Sparkles className="w-4 h-4 text-amber-600 shrink-0" />
-                  <span className="text-amber-900 font-semibold shrink-0">
+                  <Sparkles className="w-4 h-4 text-[#72202E] shrink-0" />
+                  <span className="text-[#72202E] font-semibold shrink-0">
                     {lang === 'pt' ? 'Link Ativo para Divulgação:' : 'Enlace Activo para Difusión:'}
                   </span>
-                  <span className="font-mono font-bold text-zinc-950 truncate max-w-sm sm:max-w-md bg-white/70 px-2 py-0.5 rounded border border-amber-200/60">
+                  <span className="font-mono font-bold text-zinc-950 truncate max-w-sm sm:max-w-md bg-white/70 px-2 py-0.5 rounded border border-[#EAE3D9]/60">
                     {effectiveShareLink}
                   </span>
                 </div>
@@ -2053,7 +2053,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   <button
                     type="button"
                     onClick={handleCopyLink}
-                    className="px-2.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-zinc-950 font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+                    className="px-2.5 py-1.5 rounded-lg bg-[#72202E] hover:bg-[#581520] text-zinc-950 font-bold text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
                   >
                     {copiedLink ? <Check className="w-3.5 h-3.5 stroke-[3]" /> : <Copy className="w-3.5 h-3.5" />}
                     <span>{copiedLink ? (lang === 'pt' ? 'Copiado!' : '¡Copiado!') : (lang === 'pt' ? 'Copiar' : 'Copiar')}</span>
@@ -2063,7 +2063,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     onClick={onPreviewClientView}
                     className="px-2.5 py-1.5 rounded-lg bg-white hover:bg-zinc-100 text-zinc-800 border border-zinc-300 text-xs font-semibold flex items-center gap-1 transition-colors cursor-pointer"
                   >
-                    <ExternalLink className="w-3.5 h-3.5 text-amber-600" />
+                    <ExternalLink className="w-3.5 h-3.5 text-[#72202E]" />
                     <span>{t.openMyLinkBtn}</span>
                   </button>
                 </div>
@@ -2080,7 +2080,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                     value={customShareLink}
                     onChange={(e) => setCustomShareLink(e.target.value)}
                     placeholder="https://meustudio.com.br/agenda (ou deixe vazio para usar o link gerado abaixo)"
-                    className="w-full px-3 py-2 text-xs font-mono text-zinc-900 bg-zinc-50 border border-zinc-300 rounded-lg focus:bg-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-400"
+                    className="w-full px-3 py-2 text-xs font-mono text-zinc-900 bg-zinc-50 border border-zinc-300 rounded-lg focus:bg-white focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-amber-400"
                   />
                   {customShareLink && (
                     <button
@@ -2107,9 +2107,9 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   <button
                     type="button"
                     onClick={() => handleGenerateFromSalonName()}
-                    className="text-[11px] text-amber-800 hover:text-amber-950 font-semibold flex items-center gap-1 hover:underline cursor-pointer"
+                    className="text-[11px] text-[#72202E] hover:text-[#1F1E1D] font-semibold flex items-center gap-1 hover:underline cursor-pointer"
                   >
-                    <Wand2 className="w-3 h-3 text-amber-600" />
+                    <Wand2 className="w-3 h-3 text-[#72202E]" />
                     <span>{lang === 'pt' ? `Usar "${suggestedSalonSlug}"` : `Usar "${suggestedSalonSlug}"`}</span>
                   </button>
                 </div>
@@ -2129,7 +2129,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 </div>
                 <div className="flex items-center justify-between text-[11px] text-zinc-500">
                   <span>{t.slugHelper}</span>
-                  <span className="font-mono text-amber-800 font-medium truncate max-w-xs">{currentUrl}</span>
+                  <span className="font-mono text-[#72202E] font-medium truncate max-w-xs">{currentUrl}</span>
                 </div>
               </div>
             </div>
@@ -2158,21 +2158,21 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   <button
                     type="button"
                     onClick={() => setCustomShareText((prev) => prev + ' {link}')}
-                    className="px-2 py-0.5 rounded-md bg-white border border-zinc-300 hover:border-amber-500 text-[10px] font-mono text-amber-800 font-semibold"
+                    className="px-2 py-0.5 rounded-md bg-white border border-zinc-300 hover:border-amber-500 text-[10px] font-mono text-[#72202E] font-semibold"
                   >
                     + &#123;link&#125;
                   </button>
                   <button
                     type="button"
                     onClick={() => setCustomShareText((prev) => prev + ' {profesional}')}
-                    className="px-2 py-0.5 rounded-md bg-white border border-zinc-300 hover:border-amber-500 text-[10px] font-mono text-amber-800 font-semibold"
+                    className="px-2 py-0.5 rounded-md bg-white border border-zinc-300 hover:border-amber-500 text-[10px] font-mono text-[#72202E] font-semibold"
                   >
                     + &#123;profesional&#125;
                   </button>
                   <button
                     type="button"
                     onClick={() => setCustomShareText((prev) => prev + ' {estudio}')}
-                    className="px-2 py-0.5 rounded-md bg-white border border-zinc-300 hover:border-amber-500 text-[10px] font-mono text-amber-800 font-semibold"
+                    className="px-2 py-0.5 rounded-md bg-white border border-zinc-300 hover:border-amber-500 text-[10px] font-mono text-[#72202E] font-semibold"
                   >
                     + &#123;estudio&#125;
                   </button>
@@ -2186,7 +2186,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={customShareText}
                   onChange={(e) => setCustomShareText(e.target.value)}
                   placeholder="Escreva a mensagem personalizada..."
-                  className="w-full bg-white border border-zinc-300 rounded-xl p-3.5 text-xs text-zinc-900 leading-relaxed focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200/50"
+                  className="w-full bg-white border border-zinc-300 rounded-xl p-3.5 text-xs text-zinc-900 leading-relaxed focus:outline-none focus:border-[#72202E] focus:ring-2 focus:ring-amber-200/50"
                 />
                 <div className="flex items-center justify-between text-[11px] text-zinc-500 mt-1">
                   <span>{lang === 'pt' ? 'A tag {link} será substituída pelo seu link exclusivo.' : 'La etiqueta {link} se reemplazará por tu enlace real.'}</span>
@@ -2263,7 +2263,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                   value={customBioText}
                   onChange={(e) => setCustomBioText(e.target.value)}
                   placeholder="Escreva a biografia para suas redes..."
-                  className="w-full bg-white border border-zinc-300 rounded-xl p-3.5 text-xs font-mono text-zinc-900 leading-relaxed focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200/50"
+                  className="w-full bg-white border border-zinc-300 rounded-xl p-3.5 text-xs font-mono text-zinc-900 leading-relaxed focus:outline-none focus:border-[#72202E] focus:ring-2 focus:ring-amber-200/50"
                 />
               </div>
 
@@ -2281,7 +2281,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
             {/* SAVE ALL SHARE SETTINGS BUTTON */}
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-zinc-200">
               <div className="text-[11px] text-zinc-500 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                <Sparkles className="w-3.5 h-3.5 text-[#72202E] shrink-0" />
                 <span>
                   {lang === 'pt'
                     ? 'Todas as alterações ficam salvas no Cloud SQL e associadas ao seu perfil.'
@@ -2293,7 +2293,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 <button
                   type="button"
                   onClick={handleSaveShareSettings}
-                  className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-transform active:scale-95"
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-transform active:scale-95"
                 >
                   <Save className="w-4 h-4" />
                   <span>{t.saveShareSettingsBtn}</span>
@@ -2308,10 +2308,10 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
       {activeTab === 'tutorials' && (
         <div className="space-y-6 animate-in fade-in">
           {/* Top Intro Card */}
-          <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white rounded-2xl p-5 sm:p-6 border border-amber-400/30 shadow-md">
+          <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white rounded-2xl p-5 sm:p-6 border border-[#72202E]/40/30 shadow-md">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 inline-flex items-center gap-1 mb-2">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#72202E] text-white/20 text-amber-300 border border-[#72202E]/40/40 inline-flex items-center gap-1 mb-2">
                   <Sparkles className="w-3 h-3 text-amber-300" />
                   <span>{lang === 'pt' ? 'Centro de Capacitação' : 'Centro de Aprendizaje'}</span>
                 </span>
@@ -2325,7 +2325,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 </p>
               </div>
 
-              <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center shrink-0 text-amber-400">
+              <div className="w-12 h-12 rounded-2xl bg-[#72202E] text-white/10 border border-[#72202E]/40/30 flex items-center justify-center shrink-0 text-amber-400">
                 <BookOpen className="w-6 h-6" />
               </div>
             </div>
@@ -2334,10 +2334,10 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
           {/* Two Main Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {/* Card 1: Pro Tutorial */}
-            <div className="bg-white border border-amber-300/80 rounded-2xl p-5 shadow-xs flex flex-col justify-between hover:border-amber-400 transition-all">
+            <div className="bg-white border border-[#72202E]/30/80 rounded-2xl p-5 shadow-xs flex flex-col justify-between hover:border-[#72202E]/40 transition-all">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30">
                     💼 {lang === 'pt' ? 'Para a Profissional' : 'Para el Profesional'}
                   </span>
                   <span className="text-xs text-zinc-400 font-medium">5 {lang === 'pt' ? 'passos' : 'pasos'}</span>
@@ -2354,23 +2354,23 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
                 <div className="space-y-2 text-xs text-zinc-700 bg-zinc-50 rounded-xl p-3 border border-zinc-200 mb-4">
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">1</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">1</span>
                     <span>{lang === 'pt' ? 'Perfil, fotos e horário semanal com intervalos' : 'Perfil, fotos y horario semanal con intervalos'}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">2</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">2</span>
                     <span>{lang === 'pt' ? 'Catálogo de procedimentos e prazos de retorno' : 'Catálogo de procedimientos y plazos de retorno'}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">3</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">3</span>
                     <span>{lang === 'pt' ? 'Divulgação na bio do Instagram e QR Code físico' : 'Difusión en la bio de Instagram y Código QR'}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">4</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">4</span>
                     <span>{lang === 'pt' ? 'Alertas sonoros e notificações no navegador' : 'Alertas sonoras y notificaciones en navegador'}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">5</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">5</span>
                     <span>{lang === 'pt' ? 'Agenda diária e lembretes automáticos no WhatsApp' : 'Agenda diaria y recordatorios en WhatsApp'}</span>
                   </div>
                 </div>
@@ -2389,10 +2389,10 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
             </div>
 
             {/* Card 2: Client Tutorial */}
-            <div className="bg-white border border-amber-300/80 rounded-2xl p-5 shadow-xs flex flex-col justify-between hover:border-amber-400 transition-all">
+            <div className="bg-white border border-[#72202E]/30/80 rounded-2xl p-5 shadow-xs flex flex-col justify-between hover:border-[#72202E]/40 transition-all">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30">
                     🌸 {lang === 'pt' ? 'Para as Clientes' : 'Para los Clientes'}
                   </span>
                   <span className="text-xs text-zinc-400 font-medium">4 {lang === 'pt' ? 'passos' : 'pasos'}</span>
@@ -2409,19 +2409,19 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
 
                 <div className="space-y-2 text-xs text-zinc-700 bg-zinc-50 rounded-xl p-3 border border-zinc-200 mb-4">
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">1</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">1</span>
                     <span>{lang === 'pt' ? 'Escolha do serviço, fotos de trabalhos e valores' : 'Selección de servicio, fotos de trabajos y precios'}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">2</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">2</span>
                     <span>{lang === 'pt' ? 'Seleção do dia e horário livre no calendário' : 'Selección de día y turno disponible en calendario'}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">3</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">3</span>
                     <span>{lang === 'pt' ? 'Preenchimento rápido do Nome e WhatsApp' : 'Ingreso de Nombre y WhatsApp sin contraseñas'}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-5 h-5 rounded-md bg-amber-400/20 text-amber-800 flex items-center justify-center text-[10px] font-bold">4</span>
+                    <span className="w-5 h-5 rounded-md bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center text-[10px] font-bold">4</span>
                     <span>{lang === 'pt' ? 'Confirmação na hora e envio direto no WhatsApp' : 'Confirmación inmediata y comprobante por WhatsApp'}</span>
                   </div>
                 </div>
@@ -2431,7 +2431,7 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
                 <button
                   type="button"
                   onClick={() => onOpenTutorial('client')}
-                  className="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs transition-all active:scale-95 border border-amber-300"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs transition-all active:scale-95 border border-[#72202E]/30"
                 >
                   <BookOpen className="w-4 h-4" />
                   <span>{lang === 'pt' ? 'Ver Tutorial da Cliente' : 'Ver Tutorial del Cliente'}</span>

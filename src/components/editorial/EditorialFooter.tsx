@@ -23,7 +23,7 @@ export const EditorialFooter: React.FC<EditorialFooterProps> = ({ profile, onBoo
               natural beauty
             </p>
             <p className="text-xs text-[#A89E94] max-w-sm leading-relaxed">
-              Estudio exclusivo de visagismo, pestañas, cejas y estética premium. Diseñamos cada experiencia para que te sientas segura, radiante y cuidada.
+              Estúdio exclusivo de visagismo, extensão de cílios, sobrancelhas e estética premium. Criamos experiências para você se sentir confiante, radiante e única.
             </p>
             <div className="pt-2 flex items-center gap-3">
               {profile.instagram && (
@@ -52,19 +52,19 @@ export const EditorialFooter: React.FC<EditorialFooterProps> = ({ profile, onBoo
           {/* Quick Links */}
           <div className="md:col-span-3 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white">
-              Navegación
+              Navegação
             </h4>
             <ul className="space-y-2 text-xs text-[#A89E94]">
-              <li><a href="#hero" className="hover:text-white transition-colors">Inicio</a></li>
-              <li><a href="#servicios" className="hover:text-white transition-colors">Servicios & Tarifas</a></li>
-              <li><a href="#sobre-nosotros" className="hover:text-white transition-colors">El Estudio & Filosofía</a></li>
-              <li><a href="#galeria" className="hover:text-white transition-colors">Galería de Resultados</a></li>
+              <li><a href="#hero" className="hover:text-white transition-colors">Início</a></li>
+              <li><a href="#servicios" className="hover:text-white transition-colors">Serviços & Valores</a></li>
+              <li><a href="#sobre-nosotros" className="hover:text-white transition-colors">O Estúdio & Filosofia</a></li>
+              <li><a href="#galeria" className="hover:text-white transition-colors">Galeria de Resultados</a></li>
               <li>
                 <button
                   onClick={onBookClick}
                   className="text-[#E6C280] hover:underline font-semibold"
                 >
-                  Agendar Cita Online →
+                  Agendar Horário Online →
                 </button>
               </li>
             </ul>
@@ -73,20 +73,20 @@ export const EditorialFooter: React.FC<EditorialFooterProps> = ({ profile, onBoo
           {/* Contact & Hours */}
           <div className="md:col-span-4 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-white">
-              Atención & Ubicación
+              Atendimento & Localização
             </h4>
             <div className="space-y-3 text-xs text-[#A89E94]">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#E6C280] shrink-0 mt-0.5" />
                 <span>
-                  {profile.address || 'Ubicación exclusiva'}
+                  {profile.address || 'Localização exclusiva'}
                   {profile.city ? `, ${profile.city}` : ''}
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-[#E6C280] shrink-0 mt-0.5" />
                 <span>
-                  Lunes a Sábado: {profile.workingHours?.start || '09:00'} a {profile.workingHours?.end || '19:30'}
+                  Segunda a Sábado: {profile.workingHours?.start || '09:00'} às {profile.workingHours?.end || '19:30'}
                 </span>
               </div>
               <div className="flex items-start gap-2.5">
@@ -100,12 +100,13 @@ export const EditorialFooter: React.FC<EditorialFooterProps> = ({ profile, onBoo
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#33302D] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#7A7169] gap-4">
-          <p>© {new Date().getFullYear()} {profile.businessName || 'GlowBeauty Pro'}. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} {profile.businessName || 'GlowBeauty Pro'}. Todos os direitos reservados.</p>
           <p className="flex items-center gap-1">
-            Plataforma impulsada por <span className="text-[#E6C280] font-semibold">GlowBeauty Pro</span>
+            Plataforma desenvolvida com <span className="text-[#E6C280] font-semibold">GlowBeauty Pro</span>
           </p>
         </div>
       </div>
     </footer>
   );
 };
+

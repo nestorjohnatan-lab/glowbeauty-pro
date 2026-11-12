@@ -12,11 +12,11 @@ interface EditorialServicesProps {
 
 const CATEGORY_TABS: { id: ServiceCategory | 'todos'; label: string }[] = [
   { id: 'todos', label: 'Todos' },
-  { id: 'pestañas', label: 'Pestañas' },
-  { id: 'cejas', label: 'Cejas' },
-  { id: 'uñas', label: 'Uñas' },
+  { id: 'pestañas', label: 'Cílios' },
+  { id: 'cejas', label: 'Sobrancelhas' },
+  { id: 'uñas', label: 'Unhas' },
   { id: 'facial', label: 'Facial' },
-  { id: 'maquillaje', label: 'Maquillaje' }
+  { id: 'maquillaje', label: 'Maquiagem' }
 ];
 
 export const EditorialServices: React.FC<EditorialServicesProps> = ({
@@ -33,6 +33,17 @@ export const EditorialServices: React.FC<EditorialServicesProps> = ({
       ? activeServices
       : activeServices.filter((s) => s.category === activeTab);
 
+  const getPortugueseCategory = (cat: string) => {
+    switch (cat) {
+      case 'pestañas': return 'Cílios';
+      case 'cejas': return 'Sobrancelhas';
+      case 'uñas': return 'Unhas';
+      case 'facial': return 'Facial';
+      case 'maquillaje': return 'Maquiagem';
+      default: return cat;
+    }
+  };
+
   return (
     <section id="servicios" className="py-20 bg-[#F4EFEB] border-t border-[#EAE3D9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -41,7 +52,7 @@ export const EditorialServices: React.FC<EditorialServicesProps> = ({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-[0.25em] text-[#72202E] font-semibold block">
-              Nuestros Servicios Exclusivos
+              Nossos Procedimentos Exclusivos
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#1F1E1D] uppercase leading-tight">
               Everything you need for
@@ -53,13 +64,13 @@ export const EditorialServices: React.FC<EditorialServicesProps> = ({
 
           <div className="max-w-md space-y-4">
             <p className="text-xs sm:text-sm text-[#5A524C] leading-relaxed">
-              Desde extensiones de pestañas de efecto natural y diseño de cejas visagista, hasta uñas y tratamientos faciales con tecnología de vanguardia.
+              Extensões de cílios com efeito natural, design de sobrancelhas visagista, unhas em fibra e tratamentos faciais com tecnologia de ponta.
             </p>
             <button
               onClick={onBookClick}
               className="px-6 py-2.5 bg-[#72202E] hover:bg-[#581520] text-white text-xs font-semibold uppercase tracking-[0.18em] transition-colors"
             >
-              Ver Turnos Disponibles
+              Ver Horários Disponíveis
             </button>
           </div>
         </div>
@@ -108,11 +119,11 @@ export const EditorialServices: React.FC<EditorialServicesProps> = ({
                   {/* Top Tags */}
                   <div className="absolute top-3 inset-x-3 flex items-center justify-between">
                     <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-[11px] font-semibold tracking-wider text-[#1F1E1D] uppercase">
-                      {indexStr} {service.category}
+                      {indexStr} {getPortugueseCategory(service.category)}
                     </span>
                     {service.popular && (
                       <span className="px-2.5 py-1 bg-[#72202E] text-white text-[10px] font-bold uppercase tracking-widest">
-                        Destacado
+                        Destaque
                       </span>
                     )}
                   </div>
@@ -145,7 +156,7 @@ export const EditorialServices: React.FC<EditorialServicesProps> = ({
                       onClick={() => onSelectService(service)}
                       className="px-4 py-2 bg-[#1F1E1D] group-hover:bg-[#72202E] text-white text-[11px] font-semibold uppercase tracking-[0.15em] transition-colors flex items-center gap-1.5"
                     >
-                      <span>Reservar</span>
+                      <span>Agendar</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </button>
                   </div>
@@ -159,3 +170,4 @@ export const EditorialServices: React.FC<EditorialServicesProps> = ({
     </section>
   );
 };
+

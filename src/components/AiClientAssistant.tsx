@@ -341,13 +341,13 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
   return (
     <div className={`space-y-6 ${isModal ? 'max-h-[85vh] overflow-y-auto pr-1' : ''}`}>
       {/* Top Banner: AI Agent Identity */}
-      <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white rounded-2xl p-5 sm:p-6 border border-amber-400/40 shadow-md relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white rounded-2xl p-5 sm:p-6 border border-[#72202E]/40/40 shadow-md relative overflow-hidden">
+        <div className="absolute right-0 top-0 w-64 h-64 bg-[#72202E] text-white/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="flex items-start justify-between gap-4 relative z-10">
           <div>
             <div className="flex items-center gap-2 mb-2 flex-wrap">
-              <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 inline-flex items-center gap-1">
+              <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#72202E] text-white/20 text-amber-300 border border-[#72202E]/40/40 inline-flex items-center gap-1">
                 <Sparkles className="w-3 h-3 text-amber-300" />
                 <span>{lang === 'pt' ? 'Agente de IA Oficial' : 'Agente de IA Oficial'}</span>
               </span>
@@ -394,8 +394,8 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
           {/* Section 1: Client & Service Selection */}
           <div className="bg-white border border-zinc-200 rounded-2xl p-5 shadow-xs space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
-                <Scissors className="w-3.5 h-3.5 text-amber-600" />
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-1.5">
+                <Scissors className="w-3.5 h-3.5 text-[#72202E]" />
                 <span>{lang === 'pt' ? '1. Dados da Cliente & Procedimento' : '1. Datos de la Clienta y Servicio'}</span>
               </h3>
               <span className="text-[11px] text-zinc-400">
@@ -412,7 +412,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                 <select
                   value={selectedAppointmentId}
                   onChange={(e) => handleSelectAppointment(e.target.value)}
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 >
                   <option value="">{lang === 'pt' ? '-- Escrever nome manualmente ou nova cliente --' : '-- Escribir manualmente o nueva clienta --'}</option>
                   {appointments.slice(0, 15).map((apt) => (
@@ -434,7 +434,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                   value={clientName}
                   onChange={(e) => setClientName(e.target.value)}
                   placeholder="Ej: Mariana, Camila, Sofía..."
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
 
@@ -447,7 +447,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
                   placeholder="Ej: +55 11 99999-9999"
-                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                  className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
                 />
               </div>
             </div>
@@ -459,7 +459,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
               <select
                 value={selectedServiceId}
                 onChange={(e) => setSelectedServiceId(e.target.value)}
-                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
               >
                 {services.map((s) => (
                   <option key={s.id} value={s.id}>
@@ -472,8 +472,8 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
 
           {/* Section 2: Scenario and Tone Selection */}
           <div className="bg-white border border-zinc-200 rounded-2xl p-5 shadow-xs space-y-4">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
-              <MessageSquare className="w-3.5 h-3.5 text-amber-600" />
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#72202E] flex items-center gap-1.5">
+              <MessageSquare className="w-3.5 h-3.5 text-[#72202E]" />
               <span>{lang === 'pt' ? '2. Cenário & Tom de Voz' : '2. Escenario y Tono de Voz'}</span>
             </h3>
 
@@ -492,7 +492,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                       onClick={() => handleUseScenarioExample(sc)}
                       className={`p-2.5 rounded-xl border text-left text-xs transition-all flex flex-col justify-between ${
                         isSelected
-                          ? 'bg-amber-50 border-amber-400 text-amber-950 font-bold ring-2 ring-amber-400/20 shadow-2xs'
+                          ? 'bg-[#F4EFEB] border-[#72202E]/40 text-[#1F1E1D] font-bold ring-2 ring-amber-400/20 shadow-2xs'
                           : 'bg-zinc-50 border-zinc-200 text-zinc-700 hover:bg-zinc-100'
                       }`}
                     >
@@ -540,7 +540,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                     onClick={() => setTone(item.id as AiReplyTone)}
                     className={`p-2 rounded-xl border text-center transition-all ${
                       tone === item.id
-                        ? 'bg-amber-100/90 border-amber-400 text-amber-950 font-bold shadow-2xs'
+                        ? 'bg-[#72202E]/10/90 border-[#72202E]/40 text-[#1F1E1D] font-bold shadow-2xs'
                         : 'bg-zinc-50 border-zinc-200 text-zinc-600 hover:bg-zinc-100 text-xs'
                     }`}
                   >
@@ -557,7 +557,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                 <label className="block text-xs font-semibold text-zinc-800">
                   {lang === 'pt' ? 'O que a cliente escreveu ou perguntou:' : 'Mensaje o Duda que envió la clienta:'}
                 </label>
-                <span className="text-[10px] text-amber-800 font-medium">
+                <span className="text-[10px] text-[#72202E] font-medium">
                   {lang === 'pt' ? 'Cole o texto do WhatsApp' : 'Pega el texto del chat'}
                 </span>
               </div>
@@ -570,7 +570,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                     ? 'Ex: Oi, quanto custa o volume brasileiro e você tem horário para sexta à tarde?'
                     : 'Ej: Hola, ¿cuánto cuesta el volumen ruso y tienes disponibilidad para este viernes a la tarde?'
                 }
-                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 leading-relaxed focus:bg-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-400"
+                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl p-3 text-xs text-zinc-900 leading-relaxed focus:bg-white focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-amber-400"
               />
             </div>
 
@@ -588,7 +588,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                     ? 'Ex: Avise que só tenho vaga às 16:30 e que precisa pagar R$ 30 de sinal.'
                     : 'Ej: Dile que solo me queda a las 16:30 y que debe abonar seña para asegurar.'
                 }
-                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-amber-500"
+                className="w-full bg-zinc-50 border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:bg-white focus:outline-none focus:border-[#72202E]"
               />
             </div>
 
@@ -605,7 +605,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
               type="button"
               onClick={handleGenerateReply}
               disabled={isGenerating}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 disabled:opacity-50 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-transform active:scale-98"
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#72202E] to-[#581520] hover:from-amber-500 hover:to-yellow-600 disabled:opacity-50 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-transform active:scale-98"
             >
               {isGenerating ? (
                 <>
@@ -672,7 +672,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                       </>
                     ) : (
                       <>
-                        <Copy className="w-4 h-4 text-amber-600" />
+                        <Copy className="w-4 h-4 text-[#72202E]" />
                         <span>{lang === 'pt' ? 'Copiar Mensagem' : 'Copiar Mensaje'}</span>
                       </>
                     )}
@@ -691,14 +691,14 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
 
                 {/* AI Follow-up suggestions */}
                 {suggestions.length > 0 && (
-                  <div className="bg-amber-50/80 border border-amber-200 rounded-xl p-3 space-y-1.5">
-                    <span className="text-[10px] font-bold text-amber-900 uppercase tracking-wider block">
+                  <div className="bg-[#F4EFEB]/80 border border-[#EAE3D9] rounded-xl p-3 space-y-1.5">
+                    <span className="text-[10px] font-bold text-[#72202E] uppercase tracking-wider block">
                       💡 {lang === 'pt' ? 'Dicas da IA para a profissional:' : 'Consejos del Agente IA:'}
                     </span>
                     <ul className="space-y-1">
                       {suggestions.map((sug, idx) => (
                         <li key={idx} className="text-[11px] text-zinc-700 flex items-start gap-1.5">
-                          <span className="text-amber-600 font-bold">•</span>
+                          <span className="text-[#72202E] font-bold">•</span>
                           <span>{sug}</span>
                         </li>
                       ))}
@@ -708,7 +708,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
               </div>
             ) : (
               <div className="border border-dashed border-zinc-300 rounded-2xl p-8 text-center space-y-3 bg-zinc-50/50">
-                <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto shadow-2xs">
+                <div className="w-12 h-12 rounded-2xl bg-[#72202E]/10 text-[#72202E] flex items-center justify-center mx-auto shadow-2xs">
                   <Bot className="w-6 h-6" />
                 </div>
                 <div className="space-y-1">
@@ -728,14 +728,14 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
           {/* Quick Context Summary */}
           <div className="bg-zinc-50 border border-zinc-200 rounded-2xl p-4 space-y-2 text-xs">
             <span className="text-[11px] font-bold text-zinc-900 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Contexto Ativo do Negócio:' : 'Contexto Activo del Negocio:'}</span>
             </span>
             <div className="space-y-1 text-[11px] text-zinc-600">
               <p>• <strong>{profile.businessName}</strong> ({profile.city || 'Estudio'})</p>
               <p>• <strong>{services.length}</strong> {lang === 'pt' ? 'serviços cadastrados no catálogo' : 'servicios en catálogo'}</p>
               <p>• {profile.requireDeposit ? `Sinal de ${profile.currency} ${profile.depositFixedAmount || 30} obrigatório` : 'Sem cobrança de sinal'}</p>
-              <p className="truncate">• Link: <span className="font-mono text-amber-800">{activeBookingUrl}</span></p>
+              <p className="truncate">• Link: <span className="font-mono text-[#72202E]">{activeBookingUrl}</span></p>
             </div>
           </div>
 
@@ -764,7 +764,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                 {history.slice(0, 4).map((item) => (
                   <div
                     key={item.id}
-                    className="p-2.5 rounded-xl bg-zinc-50 border border-zinc-200 hover:border-amber-300 transition-colors cursor-pointer text-left"
+                    className="p-2.5 rounded-xl bg-zinc-50 border border-zinc-200 hover:border-[#72202E]/30 transition-colors cursor-pointer text-left"
                     onClick={() => {
                       setGeneratedReply(item.replyText);
                       setClientName(item.clientName);
@@ -772,7 +772,7 @@ export const AiClientAssistant: React.FC<AiClientAssistantProps> = ({
                     }}
                   >
                     <div className="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
-                      <span className="font-bold text-amber-900">{item.clientName}</span>
+                      <span className="font-bold text-[#72202E]">{item.clientName}</span>
                       <span>{item.timestamp}</span>
                     </div>
                     <p className="text-[11px] text-zinc-800 line-clamp-2 leading-tight">

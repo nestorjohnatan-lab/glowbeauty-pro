@@ -1012,7 +1012,7 @@ export const HighlightEditor: React.FC<HighlightEditorProps> = ({
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-zinc-700 uppercase tracking-wider flex items-center gap-1.5">
-                  <Sparkles className="w-4 h-4 text-amber-500" />
+                  <Sparkles className="w-4 h-4 text-[#C4A480]" />
                   <span>{lang === 'pt' ? 'Diapositivos / Stories Deste Destaque' : 'Historias y Contenido Visual'}</span>
                 </span>
                 <span className="text-xs text-zinc-600">
@@ -1687,7 +1687,7 @@ export const HighlightEditor: React.FC<HighlightEditorProps> = ({
                   {/* Quick High-Converting Template Inspirations */}
                   <div className="space-y-1.5 pt-1">
                     <span className="text-[11px] font-bold text-zinc-600 flex items-center gap-1">
-                      <Sparkles className="w-3 h-3 text-amber-500" />
+                      <Sparkles className="w-3 h-3 text-[#C4A480]" />
                       <span>{lang === 'pt' ? 'Modelos de textos prontos para inserir:' : 'Plantillas de información listas para insertar:'}</span>
                     </span>
 

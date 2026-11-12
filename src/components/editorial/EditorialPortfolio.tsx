@@ -7,26 +7,26 @@ interface EditorialPortfolioProps {
 
 const GALLERY_ITEMS = [
   {
-    title: 'Extensión Clásica Fio a Fio',
-    category: 'Pestañas',
+    title: 'Extensão Clássica Fio a Fio',
+    category: 'Cílios',
     imageUrl: 'https://images.unsplash.com/photo-1583001809873-a128495da465?w=600&auto=format&fit=crop&q=80',
     span: 'col-span-1 row-span-2'
   },
   {
-    title: 'Diseño Visagista & Brow Lamination',
-    category: 'Cejas',
+    title: 'Design Visagista & Brow Lamination',
+    category: 'Sobrancelhas',
     imageUrl: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&auto=format&fit=crop&q=80',
     span: 'col-span-1 row-span-1'
   },
   {
     title: 'Alongamento em Fibra de Vidro',
-    category: 'Uñas',
+    category: 'Unhas',
     imageUrl: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&auto=format&fit=crop&q=80',
     span: 'col-span-1 row-span-1'
   },
   {
-    title: 'Volumen Ruso & Efecto Fox Eyes',
-    category: 'Pestañas',
+    title: 'Volume Russo & Efeito Fox Eyes',
+    category: 'Cílios',
     imageUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80',
     span: 'col-span-1 md:col-span-2 row-span-1'
   }
@@ -41,25 +41,25 @@ export const EditorialPortfolio: React.FC<EditorialPortfolioProps> = ({ onBookCl
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-[0.25em] text-[#72202E] font-semibold block">
-              Galería de Trabajos
+              Galeria de Trabalhos
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-[#1F1E1D] uppercase leading-tight">
-              Our work
+              Nosso trabalho
               <span className="font-script-luxury text-4xl sm:text-6xl text-[#72202E] lowercase block mt-1">
-                real results
+                resultados reais
               </span>
             </h2>
           </div>
 
           <div className="max-w-md space-y-4">
             <p className="text-xs sm:text-sm text-[#5A524C] leading-relaxed">
-              Cada detalle cuenta y cada mirada es única. Descubre cómo realzamos la belleza natural de nuestras clientas con técnicas modernas y precisas.
+              Cada detalhe importa e cada olhar é único. Veja como realçamos a beleza natural de nossas clientes com técnicas modernas, seguras e precisas.
             </p>
             <button
               onClick={onBookClick}
               className="px-6 py-2.5 bg-[#72202E] hover:bg-[#581520] text-white text-xs font-semibold uppercase tracking-[0.18em] transition-colors"
             >
-              Quiero Agendar un Turno
+              Agendar Atendimento Online
             </button>
           </div>
         </div>
@@ -99,3 +99,4 @@ export const EditorialPortfolio: React.FC<EditorialPortfolioProps> = ({ onBookCl
     </section>
   );
 };
+

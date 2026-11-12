@@ -95,12 +95,12 @@ const SingleToastItem: React.FC<SingleToastItemProps> = ({
     <div
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="pointer-events-auto bg-white/95 backdrop-blur-md border border-amber-300/90 rounded-2xl p-4 shadow-xl shadow-amber-950/10 transition-all duration-300 animate-in slide-in-from-top-4 fade-in overflow-hidden relative"
+      className="pointer-events-auto bg-white/95 backdrop-blur-md border border-[#72202E]/30/90 rounded-2xl p-4 shadow-xl shadow-amber-950/10 transition-all duration-300 animate-in slide-in-from-top-4 fade-in overflow-hidden relative"
     >
       {/* Top golden progress bar */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-amber-100">
+      <div className="absolute top-0 left-0 right-0 h-1 bg-[#72202E]/10">
         <div
-          className="h-full bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 transition-[width] duration-75 ease-linear"
+          className="h-full bg-gradient-to-r from-[#72202E] to-[#581520] transition-[width] duration-75 ease-linear"
           style={{ width: `${progress}%` }}
         />
       </div>
@@ -137,7 +137,7 @@ const SingleToastItem: React.FC<SingleToastItemProps> = ({
       <div className="bg-zinc-50/90 border border-zinc-200/80 rounded-xl p-2.5 mb-3">
         <div className="flex items-center justify-between text-xs font-semibold text-zinc-900 mb-1">
           <span className="truncate">{notif.clientName}</span>
-          <span className="font-bold text-amber-700 font-mono text-[11px] shrink-0">
+          <span className="font-bold text-[#72202E] font-mono text-[11px] shrink-0">
             {formatPrice(notif.price, notif.currency, lang)}
           </span>
         </div>
@@ -146,7 +146,7 @@ const SingleToastItem: React.FC<SingleToastItemProps> = ({
         </p>
         <div className="flex items-center gap-2 text-[11px] text-zinc-500">
           <span className="flex items-center gap-1">
-            <Calendar className="w-3 h-3 text-amber-600" />
+            <Calendar className="w-3 h-3 text-[#72202E]" />
             {notif.date}
           </span>
           <span>•</span>

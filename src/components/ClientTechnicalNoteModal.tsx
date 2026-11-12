@@ -233,7 +233,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-zinc-950/70 backdrop-blur-sm animate-fade-in">
-      <div className="bg-white border border-amber-300/60 rounded-3xl w-full max-w-2xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+      <div className="bg-white border border-[#72202E]/30/60 rounded-3xl w-full max-w-2xl max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="p-4 sm:p-5 bg-gradient-to-r from-zinc-900 via-zinc-950 to-amber-950 text-white flex items-center justify-between border-b border-amber-500/20 shrink-0">
           <div className="flex items-center gap-3">
@@ -245,7 +245,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                 <h2 className="text-base sm:text-lg font-serif font-bold text-white flex items-center gap-1.5">
                   {t.technicalSheetBtn}
                 </h2>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#72202E] text-white/20 text-amber-300 border border-[#72202E]/40/30">
                   {clientName ? clientName : 'Nueva Clienta'}
                 </span>
               </div>
@@ -283,7 +283,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
           <div className="bg-zinc-50 border border-zinc-200 rounded-2xl p-4 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
             <div>
               <label className="block text-xs font-semibold text-zinc-700 mb-1 flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5 text-amber-600" />
+                <User className="w-3.5 h-3.5 text-[#72202E]" />
                 <span>{t.clientNameLabel} *</span>
               </label>
               <input
@@ -292,7 +292,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                 value={clientName}
                 onChange={(e) => setClientName(e.target.value)}
                 placeholder="Ej: Larissa Mendonça"
-                className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 font-medium"
+                className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E] font-medium"
               />
             </div>
 
@@ -306,7 +306,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                 value={clientPhone}
                 onChange={(e) => setClientPhone(e.target.value)}
                 placeholder="+55 11 99999-8888"
-                className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 font-medium"
+                className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E] focus:ring-1 focus:ring-[#72202E] font-medium"
               />
             </div>
           </div>
@@ -314,21 +314,21 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
           {/* Quick Category Templates / Presets Bar */}
           <div className="flex items-center justify-between gap-2 overflow-x-auto pb-1 no-scrollbar text-xs">
             <span className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider shrink-0 flex items-center gap-1">
-              <Sparkles className="w-3 h-3 text-amber-500" />
+              <Sparkles className="w-3 h-3 text-[#C4A480]" />
               <span>Plantillas rápidas:</span>
             </span>
             <div className="flex items-center gap-1.5 shrink-0">
               <button
                 type="button"
                 onClick={() => handleApplyQuickPreset('lashes_cat')}
-                className="px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 hover:bg-amber-100 text-[11px] font-medium transition-colors"
+                className="px-2.5 py-1 rounded-lg bg-[#F4EFEB] border border-[#EAE3D9] text-[#72202E] hover:bg-[#72202E]/10 text-[11px] font-medium transition-colors"
               >
                 + Cat Eye D 9-13mm
               </button>
               <button
                 type="button"
                 onClick={() => handleApplyQuickPreset('lashes_doll')}
-                className="px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 hover:bg-amber-100 text-[11px] font-medium transition-colors"
+                className="px-2.5 py-1 rounded-lg bg-[#F4EFEB] border border-[#EAE3D9] text-[#72202E] hover:bg-[#72202E]/10 text-[11px] font-medium transition-colors"
               >
                 + Doll Eye C
               </button>
@@ -352,7 +352,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
           {/* Specialty Tabs */}
           <div className="flex items-center gap-1.5 border-b border-zinc-200 pb-2 overflow-x-auto no-scrollbar">
             {[
-              { id: 'lashes', label: t.lashTabLabel, icon: Eye, color: 'text-amber-600' },
+              { id: 'lashes', label: t.lashTabLabel, icon: Eye, color: 'text-[#72202E]' },
               { id: 'makeup', label: t.makeupTabLabel, icon: Palette, color: 'text-rose-600' },
               { id: 'nails', label: t.nailTabLabel, icon: Sparkles, color: 'text-purple-600' },
               { id: 'brows', label: t.browsTabLabel, icon: Tag, color: 'text-indigo-600' },
@@ -394,7 +394,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                         onClick={() => setLashCurvature(c)}
                         className={`text-[10px] px-2 py-0.5 rounded-lg border font-semibold ${
                           lashCurvature === c
-                            ? 'bg-amber-100 border-amber-400 text-amber-900'
+                            ? 'bg-[#72202E]/10 border-[#72202E]/40 text-[#72202E]'
                             : 'bg-white border-zinc-200 text-zinc-600 hover:bg-zinc-50'
                         }`}
                       >
@@ -407,7 +407,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={lashCurvature}
                     onChange={(e) => setLashCurvature(e.target.value)}
                     placeholder="Ej: Curva D + C en lagrimal"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -423,7 +423,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                         onClick={() => setLashThickness(th)}
                         className={`text-[10px] px-2 py-0.5 rounded-lg border font-semibold ${
                           lashThickness === th
-                            ? 'bg-amber-100 border-amber-400 text-amber-900'
+                            ? 'bg-[#72202E]/10 border-[#72202E]/40 text-[#72202E]'
                             : 'bg-white border-zinc-200 text-zinc-600 hover:bg-zinc-50'
                         }`}
                       >
@@ -436,7 +436,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={lashThickness}
                     onChange={(e) => setLashThickness(e.target.value)}
                     placeholder="Ej: 0.07 mm / Fios Tecnológicos Y"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -449,7 +449,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={lashLengths}
                     onChange={(e) => setLashLengths(e.target.value)}
                     placeholder="Ej: 8mm, 9mm, 10mm, 11mm, 12mm, 13mm"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -465,7 +465,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                         onClick={() => setLashMapping(m)}
                         className={`text-[10px] px-2 py-0.5 rounded-lg border font-semibold ${
                           lashMapping === m
-                            ? 'bg-amber-100 border-amber-400 text-amber-900'
+                            ? 'bg-[#72202E]/10 border-[#72202E]/40 text-[#72202E]'
                             : 'bg-white border-zinc-200 text-zinc-600 hover:bg-zinc-50'
                         }`}
                       >
@@ -478,7 +478,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={lashMapping}
                     onChange={(e) => setLashMapping(e.target.value)}
                     placeholder="Ej: Cat Eye con final alargado en 13mm"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -492,7 +492,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                   value={lashAdhesive}
                   onChange={(e) => setLashAdhesive(e.target.value)}
                   placeholder="Ej: Cola de secado rápido 1s, transparente, fórmula sin formaldehído"
-                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                 />
               </div>
             </div>
@@ -511,7 +511,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={makeupFoundationTone}
                     onChange={(e) => setMakeupFoundationTone(e.target.value)}
                     placeholder="Ej: MAC NC25, Fenty 210, Subtono Cálido / Dorado"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -540,7 +540,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={skinType}
                     onChange={(e) => setSkinType(e.target.value)}
                     placeholder="Ej: Zona T con tendencia a brillo, mejillas secas"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -553,7 +553,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={makeupFinishPreference}
                     onChange={(e) => setMakeupFinishPreference(e.target.value)}
                     placeholder="Ej: Mate luminoso, Cobertura media, Glow hidratado"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -566,7 +566,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={makeupLipTone}
                     onChange={(e) => setMakeupLipTone(e.target.value)}
                     placeholder="Ej: Nude melocotón, Rojo cereza mate, Gloss ácido hialurónico"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -602,7 +602,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={nailTechnique}
                     onChange={(e) => setNailTechnique(e.target.value)}
                     placeholder="Ej: Extensión en Fibra de Vidrio con Gel Builder"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
 
@@ -631,7 +631,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                     value={nailShape}
                     onChange={(e) => setNailShape(e.target.value)}
                     placeholder="Ej: Almendra corta / Cuadrada con esquinas redondeadas"
-                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                    className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                   />
                 </div>
               </div>
@@ -645,7 +645,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                   value={nailColorFavorite}
                   onChange={(e) => setNailColorFavorite(e.target.value)}
                   placeholder="Ej: Esmalte Vía Láctea + Glazed Chrome / Francesita blanca fina"
-                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                 />
               </div>
             </div>
@@ -663,7 +663,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                   value={browOrHairPigment}
                   onChange={(e) => setBrowOrHairPigment(e.target.value)}
                   placeholder="Ej: Refectocil 3.1 Castaño Claro + 1 gota Grafito. Tiempo de pose: 7 min. Para cabello: Mezcla 7.1 + 8.13 a 20 vol."
-                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                 />
               </div>
             </div>
@@ -689,7 +689,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
 
               <div>
                 <label className="block text-xs font-semibold text-zinc-700 mb-1 flex items-center gap-1.5">
-                  <Heart className="w-3.5 h-3.5 text-amber-600" />
+                  <Heart className="w-3.5 h-3.5 text-[#72202E]" />
                   <span>{t.personalPreferencesLabel}</span>
                 </label>
                 <textarea
@@ -697,7 +697,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                   value={personalPreferences}
                   onChange={(e) => setPersonalPreferences(e.target.value)}
                   placeholder="Ej: Prefiere música relajante/lo-fi en volumen bajo. Prefiere no conversar durante la aplicación. Le gusta café con leche caliente."
-                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                  className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
                 />
               </div>
             </div>
@@ -713,7 +713,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
               value={generalNotes}
               onChange={(e) => setGeneralNotes(e.target.value)}
               placeholder="Registro de evolución, retención de las pestañas en última sesión, comentarios técnicos..."
-              className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+              className="w-full bg-white border border-zinc-300 rounded-xl px-3 py-2 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
             />
           </div>
 
@@ -735,7 +735,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                   }
                 }}
                 placeholder="Escribe una etiqueta y presiona Enter..."
-                className="flex-1 bg-white border border-zinc-300 rounded-xl px-3 py-1.5 text-xs text-zinc-900 focus:outline-none focus:border-amber-500"
+                className="flex-1 bg-white border border-zinc-300 rounded-xl px-3 py-1.5 text-xs text-zinc-900 focus:outline-none focus:border-[#72202E]"
               />
               <button
                 type="button"
@@ -750,13 +750,13 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-100 text-amber-900 border border-amber-300"
+                    className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30"
                   >
                     #{tag}
                     <button
                       type="button"
                       onClick={() => handleRemoveTag(tag)}
-                      className="text-amber-700 hover:text-amber-950 font-bold ml-0.5"
+                      className="text-[#72202E] hover:text-[#1F1E1D] font-bold ml-0.5"
                     >
                       ×
                     </button>
@@ -778,7 +778,7 @@ export const ClientTechnicalNoteModal: React.FC<ClientTechnicalNoteModalProps> =
 
             <button
               type="submit"
-              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 hover:from-amber-500 hover:to-yellow-600 transition-all active:scale-95"
+              className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold text-xs shadow-md shadow-amber-500/20 hover:from-amber-500 hover:to-yellow-600 transition-all active:scale-95"
             >
               {t.saveNoteBtn}
             </button>

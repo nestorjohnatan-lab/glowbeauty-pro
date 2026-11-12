@@ -25,13 +25,13 @@ export const EditorialNavbar: React.FC<EditorialNavbarProps> = ({
         <div className="bg-[#72202E] text-white px-4 py-1.5 flex items-center justify-between text-xs">
           <span className="flex items-center gap-1.5 font-medium tracking-wide">
             <Sparkles className="w-3.5 h-3.5 text-[#E6C280]" />
-            <span>Vista previa de clienta activa</span>
+            <span>Modo de visualização da cliente</span>
           </span>
           <button
             onClick={onSwitchToProView}
             className="px-3 py-0.5 rounded-full bg-white/15 hover:bg-white/25 text-white font-medium text-[11px] transition-colors"
           >
-            Volver al Panel Pro →
+            Voltar ao Painel PRO →
           </button>
         </div>
       )}
@@ -51,11 +51,11 @@ export const EditorialNavbar: React.FC<EditorialNavbarProps> = ({
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-[0.18em] uppercase text-[#5A524C]">
-          <a href="#hero" className="hover:text-[#72202E] transition-colors">Inicio</a>
-          <a href="#servicios" className="hover:text-[#72202E] transition-colors">Servicios</a>
-          <a href="#sobre-nosotros" className="hover:text-[#72202E] transition-colors">El Estudio</a>
+          <a href="#hero" className="hover:text-[#72202E] transition-colors">Início</a>
+          <a href="#servicios" className="hover:text-[#72202E] transition-colors">Serviços</a>
+          <a href="#sobre-nosotros" className="hover:text-[#72202E] transition-colors">O Estúdio</a>
           <a href="#galeria" className="hover:text-[#72202E] transition-colors">Resultados</a>
-          <a href="#contacto" className="hover:text-[#72202E] transition-colors">Ubicación</a>
+          <a href="#contacto" className="hover:text-[#72202E] transition-colors">Localização</a>
         </nav>
 
         {/* Actions & CTA */}
@@ -86,7 +86,7 @@ export const EditorialNavbar: React.FC<EditorialNavbarProps> = ({
             onClick={onBookClick}
             className="px-6 py-2.5 rounded-none bg-[#72202E] hover:bg-[#581520] text-white text-xs font-semibold uppercase tracking-[0.15em] transition-all shadow-xs active:scale-[0.98]"
           >
-            Agendar Cita
+            Agendar Horário
           </button>
         </div>
 
@@ -101,7 +101,7 @@ export const EditorialNavbar: React.FC<EditorialNavbarProps> = ({
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 text-[#1F1E1D]"
-            aria-label="Abrir menú"
+            aria-label="Abrir menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -116,21 +116,21 @@ export const EditorialNavbar: React.FC<EditorialNavbarProps> = ({
             onClick={() => setMobileMenuOpen(false)}
             className="block text-sm font-semibold uppercase tracking-[0.15em] text-[#1F1E1D]"
           >
-            Inicio
+            Início
           </a>
           <a
             href="#servicios"
             onClick={() => setMobileMenuOpen(false)}
             className="block text-sm font-semibold uppercase tracking-[0.15em] text-[#1F1E1D]"
           >
-            Servicios
+            Serviços
           </a>
           <a
             href="#sobre-nosotros"
             onClick={() => setMobileMenuOpen(false)}
             className="block text-sm font-semibold uppercase tracking-[0.15em] text-[#1F1E1D]"
           >
-            El Estudio
+            O Estúdio
           </a>
           <a
             href="#galeria"
@@ -144,7 +144,7 @@ export const EditorialNavbar: React.FC<EditorialNavbarProps> = ({
             onClick={() => setMobileMenuOpen(false)}
             className="block text-sm font-semibold uppercase tracking-[0.15em] text-[#1F1E1D]"
           >
-            Ubicación
+            Localização
           </a>
 
           <div className="pt-4 border-t border-[#EAE3D9] flex items-center gap-4">
@@ -174,3 +174,4 @@ export const EditorialNavbar: React.FC<EditorialNavbarProps> = ({
     </header>
   );
 };
+

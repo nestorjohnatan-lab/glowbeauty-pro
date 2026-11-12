@@ -81,7 +81,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Personaliza tu estudio y define con precisión cuándo atiendes'
         : 'Customize your studio and set exact operating hours',
-      icon: <Clock className="w-5 h-5 text-amber-600" />,
+      icon: <Clock className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Defina seu Nome Profissional, foto de perfil, fotos reais do estúdio e chave PIX.'
@@ -116,7 +116,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Registra procedimientos, fotos y el tiempo recomendado para mantenimiento'
         : 'Add procedures, photos, and recommended refill intervals',
-      icon: <Scissors className="w-5 h-5 text-amber-600" />,
+      icon: <Scissors className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Cadastre serviços por categoria: Cílios, Sobrancelhas, Unhas, Facial, Maquiagem, etc.'
@@ -151,7 +151,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Ponlo en la bio de Instagram y en el mostrador de tu estudio'
         : 'Place it on your Instagram bio and studio counter',
-      icon: <Share2 className="w-5 h-5 text-amber-600" />,
+      icon: <Share2 className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Copie o Link direto do seu portal público e coloque na Bio do Instagram e nos Stories.'
@@ -186,7 +186,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Recibe avisos al instante cuando una clienta reserva'
         : 'Get instant alerts when a client places a booking',
-      icon: <BellRing className="w-5 h-5 text-amber-600" />,
+      icon: <BellRing className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Sempre que uma cliente reservar no seu portal, uma notificação dourada aparece no topo da tela com som de sino!'
@@ -218,7 +218,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Reduce faltas enviando recordatorios con 1 toque hacia WhatsApp'
         : 'Zero no-shows with 1-click WhatsApp appointment reminders',
-      icon: <MessageSquare className="w-5 h-5 text-amber-600" />,
+      icon: <MessageSquare className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Acompanhe suas clientes do dia, filtre por status (Confirmada, Pendente, Concluída).'
@@ -253,7 +253,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Registra curvatura, grosor, tonos de base, fórmulas, alergias y preferencias'
         : 'Record lash mapping, foundation tone, formulas, allergies, and preferences',
-      icon: <ClipboardList className="w-5 h-5 text-amber-600" />,
+      icon: <ClipboardList className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Na Gestão de Agendamentos, abra a aba "Notas & Fichas Técnicas" ou clique em "Ficha Técnica" diretamente no cartão da cliente.'
@@ -288,7 +288,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Ingresa cuentas bancarias y llave PIX para cobrar anticipos y confirmar citas'
         : 'Configure bank accounts and PIX keys to collect deposits and confirm bookings',
-      icon: <CreditCard className="w-5 h-5 text-amber-600" />,
+      icon: <CreditCard className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Em "Perfil & Salão", acesse a aba "Dados Bancários & PIX" para registrar sua chave PIX, banco, agência, conta e nome do titular.'
@@ -327,7 +327,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Explora las categorías y revisa fotos reales de resultados'
         : 'Browse categories and inspect real results photos',
-      icon: <Sparkles className="w-5 h-5 text-amber-600" />,
+      icon: <Sparkles className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Filtre por Cílios, Sobrancelhas, Unhas, Maquiagem ou Facial.'
@@ -363,7 +363,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'El calendario muestra únicamente turnos reales disponibles'
         : 'The calendar displays only real available openings',
-      icon: <Calendar className="w-5 h-5 text-amber-600" />,
+      icon: <Calendar className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Selecione a data desejada no carrossel de dias abertos da profissional.'
@@ -399,7 +399,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Sin contraseñas complicadas ni descargas de aplicaciones'
         : 'No tedious passwords or bulky app downloads required',
-      icon: <Smartphone className="w-5 h-5 text-amber-600" />,
+      icon: <Smartphone className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Informe seu nome completo e seu número de celular com WhatsApp.'
@@ -435,7 +435,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Tu lugar queda asegurado de inmediato en el sistema'
         : 'Your slot is secured on the spot in the studio system',
-      icon: <CheckCircle2 className="w-5 h-5 text-amber-600" />,
+      icon: <CheckCircle2 className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Clique em "Confirmar Agendamento" para reservar a sua vaga.'
@@ -471,7 +471,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         : lang === 'es'
         ? 'Disfruta al máximo de tu experiencia de belleza'
         : 'Make the most out of your beauty experience',
-      icon: <Heart className="w-5 h-5 text-amber-600" />,
+      icon: <Heart className="w-5 h-5 text-[#72202E]" />,
       bullets: [
         lang === 'pt'
           ? 'Chegue com 5 a 10 minutos de antecedência para relaxar no espaço.'
@@ -540,12 +540,12 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/70 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="bg-white border border-amber-300/80 rounded-3xl shadow-2xl max-w-2xl w-full max-h-[92vh] flex flex-col overflow-hidden">
+      <div className="bg-white border border-[#72202E]/30/80 rounded-3xl shadow-2xl max-w-2xl w-full max-h-[92vh] flex flex-col overflow-hidden">
         
         {/* Modal Top Header with Gold Gradient Accent */}
-        <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white px-5 sm:px-6 py-4 flex items-center justify-between border-b border-amber-400/30 shrink-0">
+        <div className="bg-gradient-to-r from-zinc-950 via-zinc-900 to-amber-950 text-white px-5 sm:px-6 py-4 flex items-center justify-between border-b border-[#72202E]/40/30 shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-400 to-yellow-500 p-0.5 shadow-md flex items-center justify-center text-zinc-950 font-bold">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#72202E] to-[#581520] p-0.5 shadow-md flex items-center justify-center text-zinc-950 font-bold">
               <Sparkles className="w-5 h-5 text-zinc-950" />
             </div>
             <div>
@@ -553,7 +553,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
                 <h2 className="font-serif font-bold text-base sm:text-lg text-white">
                   {t.tutorialTitle || 'Guía & Tutorial de Uso'}
                 </h2>
-                <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/40 font-bold uppercase tracking-wider">
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#72202E] text-white/20 text-amber-300 border border-[#72202E]/40/40 font-bold uppercase tracking-wider">
                   {lang === 'pt' ? 'Interativo' : 'Interactivo'}
                 </span>
               </div>
@@ -581,7 +581,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
               }}
               className={`flex-1 py-2 px-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all ${
                 activeTab === 'pro'
-                  ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 shadow-sm border border-amber-300'
+                  ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 shadow-sm border border-[#72202E]/30'
                   : 'bg-white/80 hover:bg-white text-zinc-600 border border-transparent'
               }`}
             >
@@ -597,7 +597,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
               }}
               className={`flex-1 py-2 px-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition-all ${
                 activeTab === 'client'
-                  ? 'bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 shadow-sm border border-amber-300'
+                  ? 'bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 shadow-sm border border-[#72202E]/30'
                   : 'bg-white/80 hover:bg-white text-zinc-600 border border-transparent'
               }`}
             >
@@ -623,7 +623,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
                     isCurrent
                       ? 'w-7 sm:w-8 h-7 sm:h-8 bg-zinc-950 text-amber-400 ring-2 ring-amber-400 shadow-xs'
                       : isDone
-                      ? 'w-7 sm:w-8 h-7 sm:h-8 bg-amber-100 text-amber-900 border border-amber-300'
+                      ? 'w-7 sm:w-8 h-7 sm:h-8 bg-[#72202E]/10 text-[#72202E] border border-[#72202E]/30'
                       : 'w-7 sm:w-8 h-7 sm:h-8 bg-zinc-200 text-zinc-500 hover:bg-zinc-300'
                   }`}
                   title={s.title}
@@ -645,12 +645,12 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
         <div className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-5 bg-white">
           {/* Step Header Badge and Title */}
           <div className="flex items-start gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-300 flex items-center justify-center shrink-0 shadow-xs">
+            <div className="w-11 h-11 rounded-2xl bg-[#F4EFEB] border border-[#72202E]/30 flex items-center justify-center shrink-0 shadow-xs">
               {stepData.icon}
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-200">
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#72202E]/10 text-[#72202E] border border-[#EAE3D9]">
                   {stepData.previewBadge || (activeTab === 'pro' ? 'Profissional' : 'Cliente')}
                 </span>
               </div>
@@ -666,13 +666,13 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
           {/* Bullet explanations */}
           <div className="bg-zinc-50 border border-zinc-200 rounded-2xl p-4 sm:p-5 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-500 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <Sparkles className="w-3.5 h-3.5 text-[#72202E]" />
               <span>{lang === 'pt' ? 'Como Funciona na Prática:' : lang === 'es' ? 'Cómo Funciona en la Práctica:' : 'How It Works:'}</span>
             </h4>
             <div className="space-y-2.5">
               {stepData.bullets.map((bullet, bIdx) => (
                 <div key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                  <div className="w-5 h-5 rounded-full bg-amber-400/20 text-amber-800 flex items-center justify-center shrink-0 mt-0.5 font-bold text-[11px]">
+                  <div className="w-5 h-5 rounded-full bg-[#72202E] text-white/20 text-[#72202E] flex items-center justify-center shrink-0 mt-0.5 font-bold text-[11px]">
                     ✓
                   </div>
                   <span>{bullet}</span>
@@ -682,8 +682,8 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
 
             {/* Tip box if available for clients */}
             {'tip' in stepData && stepData.tip && (
-              <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-2 text-xs text-amber-950">
-                <Star className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+              <div className="mt-3 p-3 bg-[#F4EFEB] border border-[#EAE3D9] rounded-xl flex items-start gap-2 text-xs text-[#1F1E1D]">
+                <Star className="w-4 h-4 text-[#72202E] shrink-0 mt-0.5" />
                 <span className="font-medium">{stepData.tip}</span>
               </div>
             )}
@@ -715,7 +715,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
                     onClick={() => {
                       onTestNotification();
                     }}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-zinc-950 font-bold text-xs sm:text-sm transition-all shadow-md active:scale-95 border border-amber-300"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#72202E] text-white font-bold text-xs sm:text-sm transition-all shadow-md active:scale-95 border border-[#72202E]/30"
                   >
                     <Volume2 className="w-4 h-4" />
                     <span>{lang === 'pt' ? 'Tocar Alerta Sonoro de Teste' : lang === 'es' ? 'Probar Alerta Sonora y Notificación' : 'Test Sound Alert & Notification'}</span>
@@ -750,7 +750,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
                       onStartBooking();
                       onClose();
                     }}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-zinc-950 font-bold text-xs sm:text-sm transition-all shadow-md active:scale-95 border border-amber-300"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#72202E] to-[#581520] text-zinc-950 font-bold text-xs sm:text-sm transition-all shadow-md active:scale-95 border border-[#72202E]/30"
                   >
                     <Sparkles className="w-4 h-4 text-zinc-950" />
                     <span>{t.tutorialClientCTA || '¡Entendido, quiero agendar ahora!'}</span>
@@ -808,7 +808,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
                 onClick={() => {
                   setStepIndex(currentStepIndex + 1);
                 }}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#72202E] hover:bg-[#581520] text-white font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95"
               >
                 <span>{t.tutorialNext || 'Siguiente'}</span>
                 <ChevronRight className="w-4 h-4" />
@@ -816,7 +816,7 @@ export const AppTutorialModal: React.FC<AppTutorialModalProps> = ({
             ) : (
               <button
                 onClick={onClose}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-zinc-950 hover:bg-zinc-900 text-amber-400 font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 border border-amber-400/30"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-zinc-950 hover:bg-zinc-900 text-amber-400 font-bold text-xs sm:text-sm shadow-xs transition-all active:scale-95 border border-[#72202E]/40/30"
               >
                 <Check className="w-4 h-4 stroke-[3]" />
                 <span>{t.tutorialFinish || 'Comenzar a Usar'}</span>

@@ -84,7 +84,7 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
   const currentLangObj = LANGUAGES.find((l) => l.code === lang) || LANGUAGES[0];
 
   return (
-    <header className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-zinc-200/80 px-3 sm:px-6 py-2 sm:py-3 shadow-xs">
+    <header className="sticky top-0 z-30 bg-[#FBF9F5]/95 backdrop-blur-md border-b border-[#EAE3D9] px-3 sm:px-6 py-2 sm:py-3 shadow-xs">
       <div className="max-w-6xl mx-auto flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
         {/* ============================================================== */}
         {/* ROW 1 (Mobile) / LEFT IDENTITY (Desktop)                        */}
@@ -94,7 +94,7 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
           <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
             {/* Avatar with luxury gold gradient ring */}
             <div className="relative shrink-0">
-              <div className="w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-xl p-0.5 bg-gradient-to-tr from-amber-300 via-amber-400 to-yellow-500 shadow-2xs sm:shadow-xs">
+              <div className="w-8.5 h-8.5 sm:w-10 sm:h-10 rounded-xl p-0.5 bg-gradient-to-tr from-[#C4A480] via-[#E6C280] to-[#72202E] shadow-2xs sm:shadow-xs">
                 <img
                   src={profile.avatarUrl}
                   alt={profile.name}
@@ -110,14 +110,14 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
             {/* Name, PRO Badge & Business Subtitle */}
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-1.5">
-                <span className="font-serif font-bold text-sm sm:text-base text-zinc-950 truncate tracking-tight">
+                <span className="font-serif font-bold text-sm sm:text-base text-[#1F1E1D] truncate tracking-tight">
                   {profile.name}
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-extrabold px-1.5 py-0.5 bg-amber-100 text-amber-900 rounded-md border border-amber-300/80 shrink-0 leading-none">
+                <span className="text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 bg-[#72202E]/10 text-[#72202E] rounded-md border border-[#72202E]/20 shrink-0 leading-none">
                   PRO
                 </span>
               </div>
-              <p className="text-[11px] sm:text-xs text-zinc-500 truncate leading-tight mt-0.5 font-medium hidden sm:block">
+              <p className="text-[11px] sm:text-xs text-[#7A7169] truncate leading-tight mt-0.5 font-medium hidden sm:block">
                 {profile.businessName}
               </p>
             </div>
@@ -126,7 +126,7 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
           {/* Mobile-Only CTA: Quick Catalog Preview Button */}
           <button
             onClick={onPreviewClientView}
-            className="sm:hidden h-8 px-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 text-xs font-bold flex items-center gap-1.5 shadow-xs active:scale-95 transition-all shrink-0"
+            className="sm:hidden h-8 px-3 rounded-none bg-[#72202E] hover:bg-[#581520] text-white text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 shadow-xs active:scale-95 transition-all shrink-0"
             title={t.previewClientBtn}
           >
             <Eye className="w-3.5 h-3.5 shrink-0" />
@@ -137,9 +137,9 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
         {/* ============================================================== */}
         {/* ROW 2 (Mobile Sub-bar) / RIGHT ACTIONS (Desktop Unified Bar)    */}
         {/* ============================================================== */}
-        <div className="flex items-center justify-between sm:justify-end gap-2 pt-1.5 sm:pt-0 border-t border-zinc-100 sm:border-t-0 shrink-0">
+        <div className="flex items-center justify-between sm:justify-end gap-2 pt-1.5 sm:pt-0 border-t border-[#EAE3D9] sm:border-t-0 shrink-0">
           {/* Mobile-Only Business Name on Row 2 */}
-          <div className="flex items-center gap-1.5 text-[11px] text-zinc-500 min-w-0 flex-1 sm:hidden">
+          <div className="flex items-center gap-1.5 text-[11px] text-[#7A7169] min-w-0 flex-1 sm:hidden">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
             <span className="truncate font-medium">{profile.businessName}</span>
           </div>
@@ -150,11 +150,11 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
             {onOpenAiAssistant && (
               <button
                 onClick={onOpenAiAssistant}
-                className="h-8 sm:h-10 px-2 sm:px-3 rounded-xl bg-gradient-to-r from-amber-400/20 via-yellow-400/20 to-amber-500/20 hover:from-amber-400/30 hover:to-yellow-400/30 border border-amber-300 text-amber-950 text-[11px] sm:text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs hover:border-amber-400 active:scale-95 shrink-0"
+                className="h-8 sm:h-10 px-2 sm:px-3 rounded-xl bg-[#F4EFEB] hover:bg-[#EAE3D9] border border-[#E3DACF] text-[#72202E] text-[11px] sm:text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs active:scale-95 shrink-0"
                 title={lang === 'pt' ? 'Assistente IA para responder clientes' : 'Asistente IA para responder clientas'}
                 aria-label="Asistente IA"
               >
-                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-700 shrink-0" />
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#72202E] shrink-0" />
                 <span className="hidden xs:inline">{lang === 'pt' ? 'Assistente IA' : 'Asistente IA'}</span>
                 <span className="xs:hidden">IA</span>
               </button>
@@ -164,11 +164,11 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
             {onOpenTutorial && (
               <button
                 onClick={() => onOpenTutorial('pro')}
-                className="h-8 sm:h-10 px-2 sm:px-3 rounded-xl bg-amber-50/90 hover:bg-amber-100 border border-amber-200/90 text-amber-950 text-[11px] sm:text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs hover:border-amber-300 active:scale-95 shrink-0"
+                className="h-8 sm:h-10 px-2 sm:px-3 rounded-xl bg-[#F4EFEB] hover:bg-[#EAE3D9] border border-[#E3DACF] text-[#1F1E1D] text-[11px] sm:text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs active:scale-95 shrink-0"
                 title={t.tutorialTitle || 'Guía y Tutoriales'}
                 aria-label="Tutorial"
               >
-                <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-700 shrink-0" />
+                <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#72202E] shrink-0" />
                 <span>{t.tutorialBtn || 'Tutorial'}</span>
               </button>
             )}
@@ -184,19 +184,19 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
                 }}
                 className={`relative h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-xl transition-all border shrink-0 ${
                   unreadNotificationsCount > 0
-                    ? 'bg-amber-50 hover:bg-amber-100/80 border-amber-300 text-amber-900 shadow-2xs ring-2 ring-amber-400/20'
-                    : 'bg-zinc-100 hover:bg-zinc-200/80 border-zinc-200/80 text-zinc-700'
+                    ? 'bg-[#72202E]/10 hover:bg-[#72202E]/20 border-[#72202E]/30 text-[#72202E] shadow-2xs'
+                    : 'bg-[#F4EFEB] hover:bg-[#EAE3D9] border-[#E3DACF] text-[#7A7169]'
                 }`}
                 title={t.notifCenterTitle || 'Notificaciones de Reservas'}
                 aria-label="Notificaciones"
               >
                 {unreadNotificationsCount > 0 ? (
-                  <BellRing className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-700 animate-wiggle" />
+                  <BellRing className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#72202E] animate-wiggle" />
                 ) : (
-                  <Bell className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-zinc-600" />
+                  <Bell className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#7A7169]" />
                 )}
                 {unreadNotificationsCount > 0 && (
-                  <span className="absolute -top-1 -right-1 min-w-[16px] h-4 sm:min-w-[18px] sm:h-[18px] px-1 rounded-full bg-amber-500 text-zinc-950 text-[9px] sm:text-[10px] font-black flex items-center justify-center shadow-xs border-2 border-white animate-pulse">
+                  <span className="absolute -top-1 -right-1 min-w-[16px] h-4 sm:min-w-[18px] sm:h-[18px] px-1 rounded-full bg-[#72202E] text-white text-[9px] sm:text-[10px] font-bold flex items-center justify-center shadow-xs border-2 border-white">
                     {unreadNotificationsCount > 9 ? '9+' : unreadNotificationsCount}
                   </span>
                 )}
@@ -475,7 +475,7 @@ export const ProHeader: React.FC<ProHeaderProps> = ({
             {/* 4. Desktop-Only CTA Button */}
             <button
               onClick={onPreviewClientView}
-              className="hidden sm:flex h-10 px-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 text-xs font-bold items-center gap-1.5 shadow-sm shadow-amber-500/15 transition-all active:scale-95 shrink-0"
+              className="hidden sm:flex h-10 px-5 rounded-none bg-[#72202E] hover:bg-[#581520] text-white text-xs font-semibold uppercase tracking-[0.15em] items-center gap-2 shadow-sm transition-all active:scale-95 shrink-0"
               title={t.previewClientBtn}
             >
               <Eye className="w-3.5 h-3.5 shrink-0" />

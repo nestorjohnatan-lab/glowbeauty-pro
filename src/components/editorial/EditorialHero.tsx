@@ -18,7 +18,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ profile, onBookCli
             {/* Tag / Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4EFEB] border border-[#E3DACF] text-[#72202E] text-xs uppercase tracking-[0.2em] font-semibold">
               <Sparkles className="w-3.5 h-3.5 text-[#C4A480]" />
-              <span>Estudio Exclusivo de Belleza & Mirada</span>
+              <span>Estúdio Exclusivo de Beleza & Olhar</span>
             </div>
 
             {/* Main Editorial Headline */}
@@ -35,18 +35,18 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ profile, onBookCli
             <div className="grid grid-cols-2 gap-6 pt-2 max-w-md border-y border-[#EAE3D9] py-4">
               <div>
                 <span className="block text-2xl sm:text-3xl font-serif font-bold text-[#1F1E1D]">
-                  2+ años
+                  2+ anos
                 </span>
                 <span className="text-xs text-[#7A7169] tracking-wide">
-                  de experiencia en diseño y visagismo
+                  de experiência em visagismo e extensão
                 </span>
               </div>
               <div>
                 <span className="block text-2xl sm:text-3xl font-serif font-bold text-[#1F1E1D]">
-                  275+ clientas
+                  275+ clientes
                 </span>
                 <span className="text-xs text-[#7A7169] tracking-wide">
-                  confían en su belleza y siempre satisfechas
+                  satisfeitas com atendimento impecável
                 </span>
               </div>
             </div>
@@ -54,7 +54,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ profile, onBookCli
             {/* Microcopy & CTA */}
             <div className="space-y-6 pt-2">
               <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-[#5A524C] font-semibold max-w-lg leading-relaxed">
-                Experience beauty, comfort and exceptional personalized service in one place.
+                Viva o conforto, a beleza e um atendimento personalizado e exclusivo em um só lugar.
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
@@ -62,7 +62,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ profile, onBookCli
                   onClick={onBookClick}
                   className="px-8 py-4 bg-[#72202E] hover:bg-[#581520] text-white text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] transition-all shadow-md hover:shadow-lg active:scale-[0.98] flex items-center gap-3"
                 >
-                  <span>Agendar Cita</span>
+                  <span>Agendar Horário</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
@@ -70,7 +70,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ profile, onBookCli
                   href="#servicios"
                   className="px-6 py-4 border border-[#1F1E1D]/20 hover:border-[#72202E] hover:text-[#72202E] text-[#1F1E1D] text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] transition-colors"
                 >
-                  Explorar Catálogo
+                  Conhecer Serviços
                 </a>
               </div>
             </div>
@@ -116,7 +116,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ profile, onBookCli
                 </div>
 
                 <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-[#1F1E1D] leading-snug">
-                  Tratamientos profesionales de belleza con productos premium y resultados impecables.
+                  Procedimentos exclusivos de beleza com produtos premium e resultados impecáveis.
                 </p>
               </div>
 
@@ -128,3 +128,4 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ profile, onBookCli
     </section>
   );
 };
+
