@@ -1,7 +1,42 @@
 @import "tailwindcss";
 
-body {
-  background-color: #f4f4f5;
-  color: #18181b;
-  -webkit-font-smoothing: antialiased;
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-script: 'Alex Brush', cursive;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    background-color: #FBF9F5;
+    color: #1F1E1D;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-script-luxury {
+    font-family: 'Alex Brush', cursive;
+  }
+}
+
+/* Custom scrollbar styling for elegance */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFEB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4A480;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #72202E;
 }

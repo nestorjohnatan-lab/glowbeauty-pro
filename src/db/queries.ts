@@ -265,7 +265,7 @@ export async function deleteAppointmentFromDb(id: string): Promise<boolean> {
 // ----------------------------------------------------
 export async function getTemplatesFromDb(): Promise<WhatsAppTemplate[]> {
   const db = getDb();
-  const rows = db.prepare('SELECT id, type, title, template FROM templates').all() as WhatsAppTemplate[];
+  const rows = db.prepare('SELECT id, type, title, template FROM templates').all() as unknown as WhatsAppTemplate[];
   if (rows && rows.length > 0) {
     return rows;
   }
@@ -283,7 +283,7 @@ export async function getTemplatesFromDb(): Promise<WhatsAppTemplate[]> {
 
 export async function updateTemplateInDb(id: string, template: string, title?: string): Promise<WhatsAppTemplate | null> {
   const db = getDb();
-  const existing = db.prepare('SELECT id, type, title, template FROM templates WHERE id = ?').get(id) as WhatsAppTemplate | undefined;
+  const existing = db.prepare('SELECT id, type, title, template FROM templates WHERE id = ?').get(id) as unknown as (WhatsAppTemplate | undefined);
   const targetTitle = title || existing?.title || 'Plantilla';
   const targetType = existing?.type || 'reminder_24h';
 
