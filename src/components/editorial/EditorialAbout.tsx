@@ -100,7 +100,12 @@ export const EditorialAbout: React.FC<EditorialAboutProps> = ({ profile, onBookC
           <div className="lg:col-span-5 relative">
             <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E3DACF] aspect-[4/5] bg-[#EAE3D9]">
               <img
-                src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=900&auto=format&fit=crop&q=80"
+                src={
+                  profile.workspacePhotoUrl ||
+                  profile.salonPhotos?.[0]?.url ||
+                  profile.coverUrl ||
+                  'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=900&auto=format&fit=crop&q=80'
+                }
                 alt="Studio Interior"
                 className="w-full h-full object-cover"
               />

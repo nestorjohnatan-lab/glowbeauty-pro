@@ -119,6 +119,36 @@ const STUDIO_PHOTO_PRESETS = [
   }
 ];
 
+const FACADE_PHOTO_PRESETS = [
+  {
+    title: 'Fachada Elegante & Vidro',
+    url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80'
+  },
+  {
+    title: 'Entrada Minimalista Studio',
+    url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&auto=format&fit=crop&q=80'
+  },
+  {
+    title: 'Fachada Boutique Moderna',
+    url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&auto=format&fit=crop&q=80'
+  }
+];
+
+const WORKSPACE_PHOTO_PRESETS = [
+  {
+    title: 'Maca Confort & Ring Light',
+    url: 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=1200&auto=format&fit=crop&q=80'
+  },
+  {
+    title: 'Cabine Individual Climatizada',
+    url: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&auto=format&fit=crop&q=80'
+  },
+  {
+    title: 'Studio de Atendimento Visagista',
+    url: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop&q=80'
+  }
+];
+
 export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
   profile,
   onUpdateProfile,
@@ -162,6 +192,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
   const [bio, setBio] = useState(profile.bio || '');
   const [avatarUrl, setAvatarUrl] = useState(profile.avatarUrl);
   const [coverUrl, setCoverUrl] = useState(profile.coverUrl);
+  const [facadePhotoUrl, setFacadePhotoUrl] = useState(profile.facadePhotoUrl || '');
+  const [workspacePhotoUrl, setWorkspacePhotoUrl] = useState(profile.workspacePhotoUrl || '');
   const [whatsapp, setWhatsapp] = useState(profile.whatsapp);
   const [instagram, setInstagram] = useState(profile.instagram || '');
   const [tiktok, setTiktok] = useState(profile.tiktok || '');
@@ -212,6 +244,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
     setBio(profile.bio || '');
     setAvatarUrl(profile.avatarUrl);
     setCoverUrl(profile.coverUrl);
+    setFacadePhotoUrl(profile.facadePhotoUrl || '');
+    setWorkspacePhotoUrl(profile.workspacePhotoUrl || '');
     setWhatsapp(profile.whatsapp);
     setInstagram(profile.instagram || '');
     setTiktok(profile.tiktok || '');
@@ -503,6 +537,54 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
     setTimeout(() => setSaveFeedback(null), 2500);
   };
 
+  const handleFacadeUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        if (typeof reader.result === 'string') {
+          const newUrl = reader.result;
+          setFacadePhotoUrl(newUrl);
+          onUpdateProfile({ facadePhotoUrl: newUrl });
+          setSaveFeedback(lang === 'pt' ? 'Foto da fachada salva com sucesso!' : '¡Foto de la fachada guardada!');
+          setTimeout(() => setSaveFeedback(null), 2500);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSelectFacadePreset = (preset: string) => {
+    setFacadePhotoUrl(preset);
+    onUpdateProfile({ facadePhotoUrl: preset });
+    setSaveFeedback(lang === 'pt' ? 'Foto da fachada atualizada!' : '¡Foto de fachada actualizada!');
+    setTimeout(() => setSaveFeedback(null), 2500);
+  };
+
+  const handleWorkspaceUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        if (typeof reader.result === 'string') {
+          const newUrl = reader.result;
+          setWorkspacePhotoUrl(newUrl);
+          onUpdateProfile({ workspacePhotoUrl: newUrl });
+          setSaveFeedback(lang === 'pt' ? 'Foto do espaço de atendimento salva!' : '¡Foto del espacio guardada!');
+          setTimeout(() => setSaveFeedback(null), 2500);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleSelectWorkspacePreset = (preset: string) => {
+    setWorkspacePhotoUrl(preset);
+    onUpdateProfile({ workspacePhotoUrl: preset });
+    setSaveFeedback(lang === 'pt' ? 'Foto do espaço de atendimento atualizada!' : '¡Foto del espacio actualizada!');
+    setTimeout(() => setSaveFeedback(null), 2500);
+  };
+
   const [isUploadingSpacePhoto, setIsUploadingSpacePhoto] = useState(false);
 
   const handleSpacePhotoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -669,6 +751,8 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
       bio: bio.trim(),
       avatarUrl,
       coverUrl,
+      facadePhotoUrl: facadePhotoUrl.trim() || undefined,
+      workspacePhotoUrl: workspacePhotoUrl.trim() || undefined,
       whatsapp: whatsapp.trim(),
       instagram: instagram.trim(),
       tiktok: tiktok.trim(),
@@ -1746,6 +1830,219 @@ export const ProfileAndShareManager: React.FC<ProfileAndShareManagerProps> = ({
       {/* TAB 2: Studio & Salon Space Photos Gallery Manager */}
       {activeTab === 'space_photos' && (
         <div className="space-y-6">
+          {/* TWO MAIN SHOWCASE CARDS: FACHADA & ESPAÇO DE ATENDIMENTO */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* CARD 1: FACHADA DO ESTÚDIO */}
+            <div className="bg-white border border-[#EAE3D9] rounded-2xl p-5 shadow-xs flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="w-7 h-7 rounded-lg bg-[#72202E]/10 flex items-center justify-center text-[#72202E]">
+                      <Store className="w-4 h-4" />
+                    </span>
+                    <div>
+                      <h3 className="text-sm font-bold text-[#1F1E1D]">
+                        {lang === 'pt' ? 'Foto da Fachada do Estúdio' : 'Foto de la Fachada'}
+                      </h3>
+                      <p className="text-[11px] text-[#7A7169]">
+                        {lang === 'pt' ? 'Entrada e identificação externa' : 'Identificación exterior'}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#72202E] bg-[#F4EFEB] px-2 py-0.5 rounded-md">
+                    {lang === 'pt' ? 'Destaque Catálogo' : 'Destacado'}
+                  </span>
+                </div>
+
+                {/* Image Preview */}
+                <div className="relative aspect-video rounded-xl overflow-hidden border border-[#EAE3D9] bg-[#FBF9F5] group">
+                  <img
+                    src={facadePhotoUrl || 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80'}
+                    alt="Fachada do Estúdio"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                    <p className="text-[11px] text-white/90 font-medium truncate">
+                      {facadePhotoUrl ? (lang === 'pt' ? 'Foto personalizada ativa' : 'Foto personalizada activa') : (lang === 'pt' ? 'Foto padrão do estúdio' : 'Foto por defecto')}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-[11px] text-[#7A7169] leading-relaxed">
+                  {lang === 'pt'
+                    ? 'Esta foto aparece no topo da vitrine do seu catálogo para que as clientes encontrem seu espaço com facilidade e segurança.'
+                    : 'Esta foto aparece en la vitrina de tu catálogo para que las clientas reconozcan tu local fácilmente.'}
+                </p>
+
+                {/* Upload Button & URL input */}
+                <div className="space-y-2 pt-1">
+                  <div className="flex items-center gap-2">
+                    <label className="cursor-pointer flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-[#72202E] text-white font-medium text-xs shadow-xs hover:bg-[#581520] transition-colors">
+                      <Upload className="w-3.5 h-3.5" />
+                      <span>{lang === 'pt' ? 'Subir Foto da Fachada' : 'Subir Foto'}</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleFacadeUpload}
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="url"
+                      value={facadePhotoUrl}
+                      onChange={(e) => {
+                        setFacadePhotoUrl(e.target.value);
+                        onUpdateProfile({ facadePhotoUrl: e.target.value.trim() || undefined });
+                      }}
+                      placeholder="https://... URL da foto da fachada"
+                      className="flex-1 bg-[#FBF9F5] border border-[#EAE3D9] rounded-lg px-2.5 py-1.5 text-xs text-[#1F1E1D] focus:outline-none focus:border-[#72202E]"
+                    />
+                    {facadePhotoUrl && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setFacadePhotoUrl('');
+                          onUpdateProfile({ facadePhotoUrl: undefined });
+                        }}
+                        className="p-1.5 text-[#7A7169] hover:text-[#72202E] text-xs font-semibold"
+                        title={lang === 'pt' ? 'Restaurar padrão' : 'Restaurar'}
+                      >
+                        {lang === 'pt' ? 'Limpar' : 'Limpiar'}
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Presets */}
+                <div className="pt-2 border-t border-[#EAE3D9]">
+                  <span className="text-[10px] text-[#7A7169] block mb-1.5 font-medium">
+                    {lang === 'pt' ? 'Ou escolha uma fachada elegante pré-definida:' : 'O elige una sugerencia:'}
+                  </span>
+                  <div className="flex flex-wrap gap-1.5">
+                    {FACADE_PHOTO_PRESETS.map((preset, idx) => (
+                      <button
+                        key={idx}
+                        type="button"
+                        onClick={() => handleSelectFacadePreset(preset.url)}
+                        className="px-2 py-1 rounded-md bg-[#F4EFEB] hover:bg-[#72202E] hover:text-white text-[10px] text-[#5A524C] font-medium transition-colors"
+                      >
+                        + {preset.title}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CARD 2: ESPAÇO DE ATENDIMENTO / MACA */}
+            <div className="bg-white border border-[#EAE3D9] rounded-2xl p-5 shadow-xs flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="w-7 h-7 rounded-lg bg-[#72202E]/10 flex items-center justify-center text-[#72202E]">
+                      <Sparkles className="w-4 h-4" />
+                    </span>
+                    <div>
+                      <h3 className="text-sm font-bold text-[#1F1E1D]">
+                        {lang === 'pt' ? 'Foto do Espaço de Atendimento' : 'Foto del Espacio de Trabajo'}
+                      </h3>
+                      <p className="text-[11px] text-[#7A7169]">
+                        {lang === 'pt' ? 'Maca, cabine individual e ambiente' : 'Camilla, cabina y ambiente'}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[#72202E] bg-[#F4EFEB] px-2 py-0.5 rounded-md">
+                    {lang === 'pt' ? 'Destaque Catálogo' : 'Destacado'}
+                  </span>
+                </div>
+
+                {/* Image Preview */}
+                <div className="relative aspect-video rounded-xl overflow-hidden border border-[#EAE3D9] bg-[#FBF9F5] group">
+                  <img
+                    src={workspacePhotoUrl || 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=1200&auto=format&fit=crop&q=80'}
+                    alt="Espaço de Atendimento"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                    <p className="text-[11px] text-white/90 font-medium truncate">
+                      {workspacePhotoUrl ? (lang === 'pt' ? 'Foto personalizada ativa' : 'Foto personalizada activa') : (lang === 'pt' ? 'Foto padrão do espaço' : 'Foto por defecto')}
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-[11px] text-[#7A7169] leading-relaxed">
+                  {lang === 'pt'
+                    ? 'Esta foto exibe seu conforto e biossegurança (maca, ring light e ambiente relaxante) transmitindo máxima confiança antes do agendamento.'
+                    : 'Esta foto muestra el confort y bioseguridad de tu espacio de trabajo transmitiendo máxima confianza.'}
+                </p>
+
+                {/* Upload Button & URL input */}
+                <div className="space-y-2 pt-1">
+                  <div className="flex items-center gap-2">
+                    <label className="cursor-pointer flex-1 inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl bg-[#72202E] text-white font-medium text-xs shadow-xs hover:bg-[#581520] transition-colors">
+                      <Upload className="w-3.5 h-3.5" />
+                      <span>{lang === 'pt' ? 'Subir Foto do Espaço / Maca' : 'Subir Foto'}</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleWorkspaceUpload}
+                        className="hidden"
+                      />
+                    </label>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <input
+                      type="url"
+                      value={workspacePhotoUrl}
+                      onChange={(e) => {
+                        setWorkspacePhotoUrl(e.target.value);
+                        onUpdateProfile({ workspacePhotoUrl: e.target.value.trim() || undefined });
+                      }}
+                      placeholder="https://... URL da foto do espaço"
+                      className="flex-1 bg-[#FBF9F5] border border-[#EAE3D9] rounded-lg px-2.5 py-1.5 text-xs text-[#1F1E1D] focus:outline-none focus:border-[#72202E]"
+                    />
+                    {workspacePhotoUrl && (
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setWorkspacePhotoUrl('');
+                          onUpdateProfile({ workspacePhotoUrl: undefined });
+                        }}
+                        className="p-1.5 text-[#7A7169] hover:text-[#72202E] text-xs font-semibold"
+                        title={lang === 'pt' ? 'Restaurar padrão' : 'Restaurar'}
+                      >
+                        {lang === 'pt' ? 'Limpar' : 'Limpiar'}
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Presets */}
+                <div className="pt-2 border-t border-[#EAE3D9]">
+                  <span className="text-[10px] text-[#7A7169] block mb-1.5 font-medium">
+                    {lang === 'pt' ? 'Ou escolha um espaço visagista pré-definido:' : 'O elige una sugerencia:'}
+                  </span>
+                  <div className="flex flex-wrap gap-1.5">
+                    {WORKSPACE_PHOTO_PRESETS.map((preset, idx) => (
+                      <button
+                        key={idx}
+                        type="button"
+                        onClick={() => handleSelectWorkspacePreset(preset.url)}
+                        className="px-2 py-1 rounded-md bg-[#F4EFEB] hover:bg-[#72202E] hover:text-white text-[10px] text-[#5A524C] font-medium transition-colors"
+                      >
+                        + {preset.title}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-xs space-y-4">
             <div>
               <h2 className="text-base font-bold text-zinc-950 flex items-center gap-2">

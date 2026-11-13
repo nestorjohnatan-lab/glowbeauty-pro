@@ -146,6 +146,8 @@ export const INITIAL_PRO_PROFILE: BeautyProProfile = {
   bookingPolicy: 'Tolerância de 10 minutos. Para atendimento de cílios, favor vir sem máscara de cílios e sem maquiagem na região dos olhos. Remarcações com no mínimo 4h de antecedência.',
   avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop&q=80',
   coverUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80',
+  facadePhotoUrl: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&auto=format&fit=crop&q=80',
+  workspacePhotoUrl: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&auto=format&fit=crop&q=80',
   themeColor: 'gold',
   language: 'pt',
   clientTechnicalNotes: INITIAL_CLIENT_TECHNICAL_NOTES,

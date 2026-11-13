@@ -15,6 +15,9 @@ yarn-error.log*
 !.env.example
 
 # Base de datos local (se genera en tiempo de ejecución en el servidor)
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
 data/*.sqlite
 data/*.sqlite-wal
 data/*.sqlite-shm

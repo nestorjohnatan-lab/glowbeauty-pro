@@ -40,6 +40,7 @@ import {
 import { AppTutorialModal } from './AppTutorialModal';
 import { EditorialNavbar } from './editorial/EditorialNavbar';
 import { EditorialHero } from './editorial/EditorialHero';
+import { EditorialStudioShowcase } from './editorial/EditorialStudioShowcase';
 import { EditorialServices } from './editorial/EditorialServices';
 import { EditorialAbout } from './editorial/EditorialAbout';
 import { EditorialPortfolio } from './editorial/EditorialPortfolio';
@@ -482,6 +483,12 @@ export const ClientPublicPortal: React.FC<ClientPublicPortalProps> = ({
           onBookClick={handleBookClick}
         />
 
+        {/* Studio Facade & Treatment Space Showcase */}
+        <EditorialStudioShowcase
+          profile={profile}
+          onBookClick={handleBookClick}
+        />
+
         <EditorialAbout
           profile={profile}
           onBookClick={handleBookClick}
@@ -510,7 +517,7 @@ export const ClientPublicPortal: React.FC<ClientPublicPortalProps> = ({
                 className="p-1 rounded-lg text-[#5A524C] hover:text-[#1F1E1D] flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider"
               >
                 <ArrowLeft className="w-4 h-4" />
-                <span>{step === 2 ? (lang === 'pt' ? 'Fechar' : 'Cerrar') : t.back}</span>
+                <span>{step === 2 ? (lang === 'es' ? 'Cerrar' : lang === 'en' ? 'Close' : 'Fechar') : (lang === 'es' ? 'Volver' : lang === 'en' ? 'Back' : 'Voltar')}</span>
               </button>
 
               <div className="flex items-center gap-2">
@@ -534,7 +541,7 @@ export const ClientPublicPortal: React.FC<ClientPublicPortalProps> = ({
                     }
                   }}
                   className="p-1.5 rounded-full text-[#7A7169] hover:text-[#1F1E1D] hover:bg-[#F4EFEB] transition-colors"
-                  title={lang === 'pt' ? 'Fechar' : 'Cerrar'}
+                  title={lang === 'es' ? 'Cerrar' : lang === 'en' ? 'Close' : 'Fechar'}
                 >
                   <X className="w-5 h-5" />
                 </button>

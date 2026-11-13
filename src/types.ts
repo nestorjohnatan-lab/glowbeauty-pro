@@ -112,6 +112,8 @@ export interface BeautyProProfile {
   bookingPolicy: string;
   avatarUrl: string;
   coverUrl?: string;
+  facadePhotoUrl?: string; // Foto da Fachada / Entrada do Estúdio
+  workspacePhotoUrl?: string; // Foto do Espaço de Atendimento / Sala de Procedimentos
   themeColor: string; // 'rose', 'amber', 'emerald', 'stone'
   salonPhotos: SalonPhoto[];
   highlights: ProfileHighlight[];
