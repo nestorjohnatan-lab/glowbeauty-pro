@@ -495,6 +495,7 @@ export const ClientPublicPortal: React.FC<ClientPublicPortalProps> = ({
       <EditorialFooter
         profile={profile}
         onBookClick={handleBookClick}
+        onOpenAdminLogin={onSwitchToProView}
       />
 
       {/* 2. Interactive Booking Modal (When in Steps 2, 3 or 4) */}

@@ -73,7 +73,12 @@ export default function App() {
     return 'client';
   });
 
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const params = new URLSearchParams(window.location.search);
+    const hasToken = !!localStorage.getItem(STORAGE_KEYS.authToken);
+    return !hasToken && (params.get('panel') === 'pro' || params.get('admin') === 'true');
+  });
   const [proTab, setProTab] = useState<ProTab>('agenda');
   const [lang, setLang] = useState<AppLanguage>('pt');
 
@@ -491,7 +496,7 @@ export default function App() {
           existingAppointments={appointments}
           onBookAppointment={handleBookAppointment}
           onSwitchToProView={handleRequestProView}
-          isStandaloneClient={false}
+          isStandaloneClient={!authToken}
           lang={lang}
         />
       ) : (

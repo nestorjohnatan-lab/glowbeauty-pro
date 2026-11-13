@@ -6,9 +6,10 @@ import { cleanPhoneNumber } from '../../utils/whatsapp';
 interface EditorialFooterProps {
   profile: BeautyProProfile;
   onBookClick: () => void;
+  onOpenAdminLogin?: () => void;
 }
 
-export const EditorialFooter: React.FC<EditorialFooterProps> = ({ profile, onBookClick }) => {
+export const EditorialFooter: React.FC<EditorialFooterProps> = ({ profile, onBookClick, onOpenAdminLogin }) => {
   return (
     <footer id="contacto" className="bg-[#1F1E1D] text-[#EAE3D9] pt-16 pb-12 border-t border-[#33302D]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -101,9 +102,21 @@ export const EditorialFooter: React.FC<EditorialFooterProps> = ({ profile, onBoo
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-[#33302D] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#7A7169] gap-4">
           <p>© {new Date().getFullYear()} {profile.businessName || 'GlowBeauty Pro'}. Todos os direitos reservados.</p>
-          <p className="flex items-center gap-1">
-            Plataforma desenvolvida com <span className="text-[#E6C280] font-semibold">GlowBeauty Pro</span>
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="flex items-center gap-1">
+              Plataforma desenvolvida com <span className="text-[#E6C280] font-semibold">GlowBeauty Pro</span>
+            </p>
+            {onOpenAdminLogin && (
+              <button
+                type="button"
+                onClick={onOpenAdminLogin}
+                className="text-[#7A7169] hover:text-[#E6C280] transition-colors underline text-[10px]"
+                title="Acesso restrito da especialista"
+              >
+                Área da Especialista
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </footer>
